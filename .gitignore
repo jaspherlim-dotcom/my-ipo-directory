@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 premium_out/
 prospectus/*.pdf
+.env
+dist.new/
+dist.old/
+data/_zo_last_daily.txt

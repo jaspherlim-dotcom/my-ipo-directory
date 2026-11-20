@@ -1,6 +1,7 @@
 """把 data/ipos/*.json 生成静态网站到 dist/。"""
 from __future__ import annotations
 
+import os
 import datetime as dt
 import json
 import shutil
@@ -9,7 +10,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parent.parent
-DIST = ROOT / "dist"
+DIST = Path(os.environ["IPO_DIST"]) if os.environ.get("IPO_DIST") else ROOT / "dist"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 TODAY = dt.date.today()
 
