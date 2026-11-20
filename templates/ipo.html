@@ -6,6 +6,7 @@
 <nav class="crumb"><a href="../index.html">IPO 列表</a> / {{ r.name_zh }}</nav>
 
 <section class="ipo-head">
+  <span class="card-ic head-ic tone-{{ r.tone }}" aria-hidden="true">{{ r.icon }}</span>
   <div class="card-top">
     <span class="status status-{{ r.status }}">{{ r.status_zh }}</span>
     <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>

@@ -1,68 +1,121 @@
 {% extends "base.html" %}
+{% block bodyclass %}home{% endblock %}
+{% block tab_home %}on{% endblock %}
+{% macro tile(r) -%}
+<a class="tile" href="ipo/{{ r.slug }}.html">
+  <div class="tile-art tone-{{ r.tone }}">
+    <span class="tile-icon" aria-hidden="true">{{ r.icon }}</span>
+    {% if r.locked %}<span class="pill pill-lock">🔒 会员</span>{% else %}<span class="pill pill-free">免费</span>{% endif %}
+    {% if r.first_day_pct is not none %}<span class="pill pill-perf {{ 'up' if r.first_day_pct >= 0 else 'down' }}">首日 {{ '%+.1f'|format(r.first_day_pct) }}%</span>{% endif %}
+  </div>
+  <h3>{{ r.name_zh }}</h3>
+  <p class="tile-meta">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }} · {{ fmt_fact('listing_date', fv(r,'listing_date')) }}</p>
+  <span class="chip-tag">{{ (r.sector_zh or '').split(' · ')[-1] }}</span>
+</a>
+{%- endmacro %}
 {% block body %}
-<section class="hero">
-  <p class="eyebrow">Bursa Malaysia · 中文 IPO 资料库</p>
-  <h1>看懂每一个马股 IPO：<br>它靠什么赚钱，钱拿去做什么。</h1>
-  <p class="lede">{{ cfg.site_tagline }}。资料每天自动更新，优先采用 Bursa 公告、证监会（SC）文件和招股书。</p>
-  <div class="stats">
-    <div><b>{{ counts.open }}</b><span>认购中</span></div>
-    <div><b>{{ counts.upcoming }}</b><span>即将上市</span></div>
-    <div><b>{{ counts.listed }}</b><span>近期已上市</span></div>
-  </div>
+
+<section class="shortcuts" aria-label="快捷入口">
+  <button class="sc" data-set-status="open"><span class="sc-ic tone-mint">🔥{% if counts.open %}<i class="badge">{{ counts.open }}</i>{% endif %}</span>认购中</button>
+  <button class="sc" data-set-status="upcoming"><span class="sc-ic tone-sky">🗓️{% if counts.upcoming %}<i class="badge">{{ counts.upcoming }}</i>{% endif %}</span>即将上市</button>
+  <button class="sc" data-set-status="listed"><span class="sc-ic tone-sand">🔔</span>已上市</button>
+  <button class="sc" data-set-market="Main"><span class="sc-ic tone-lilac">🏛️</span>主板</button>
+  <button class="sc" data-set-market="ACE"><span class="sc-ic tone-peach">🚀</span>ACE</button>
+  <button class="sc" data-set-market="LEAP"><span class="sc-ic tone-mint">🌱</span>LEAP</button>
+  <button class="sc" data-set-shariah="1"><span class="sc-ic tone-sky">🌙</span>伊斯兰合规</button>
+  <a class="sc" href="about.html#bmc"><span class="sc-ic tone-sand">🧩</span>9 宫格</a>
+  <a class="sc" href="about.html"><span class="sc-ic tone-lilac">📑</span>资料来源</a>
+  <a class="sc" href="{{ 'membership.html' if cfg.membership.require_payment else 'login.html' }}"><span class="sc-ic tone-peach">🎁{% if home.locked %}<i class="badge">+{{ home.locked }}</i>{% endif %}</span>{{ '会员' if cfg.membership.require_payment else '免费解锁' }}</a>
 </section>
 
-<aside class="member-banner">
-  <div><b>前 4 家 IPO 免费看。</b>{% if cfg.membership.require_payment %}其余公司的完整资料、募资拆解和商业模式 9 宫格，会员登入即可解锁。{% else %}其余公司的完整资料和商业模式 9 宫格，<b>免费注册</b>登入就能看。{% endif %}</div>
-  {% if cfg.membership.require_payment %}<a class="btn" href="membership.html">查看会员方案</a>{% else %}<a class="btn" href="login.html">免费注册</a>{% endif %}
-</aside>
-
-<section class="filters" aria-label="筛选">
-  <div class="chips" data-filter="status">
-    <button class="chip on" data-v="all">全部</button>
-    <button class="chip" data-v="open">认购中</button>
-    <button class="chip" data-v="upcoming">即将上市</button>
-    <button class="chip" data-v="listed">已上市</button>
-  </div>
-  <div class="chips" data-filter="market">
-    <button class="chip on" data-v="all">所有市场</button>
-    <button class="chip" data-v="Main">主板</button>
-    <button class="chip" data-v="ACE">ACE</button>
-    <button class="chip" data-v="LEAP">LEAP</button>
-  </div>
-  <input class="search" type="search" placeholder="搜索公司或行业…" aria-label="搜索">
-</section>
-
-<section class="cards">
-{% for r in recs %}
-  <a class="card" href="ipo/{{ r.slug }}.html" data-status="{{ r.status }}" data-market="{{ fv(r,'market') }}" data-q="{{ r.name|lower }} {{ r.name_zh|lower }} {{ r.sector_zh }}">
-    <div class="card-top">
-      <span class="status status-{{ r.status }}">{{ r.status_zh }}</span>
-      <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>
-      {% if fv(r,'shariah') %}<span class="mkt">伊斯兰合规</span>{% endif %}
-    </div>
-    {% if r.locked %}<span class="lock-badge">🔒 会员</span>{% endif %}
-    <h2>{{ r.name_zh }}</h2>
-    <p class="sub">{{ r.name }}</p>
-    <p class="sector">{{ r.sector_zh }}</p>
-    <p class="liner">{{ r.one_liner }}</p>
-    {% if r.locked %}
-    <dl class="mini">
-      <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
-      <div><dt>发行价 · 市值 · 认购</dt><dd class="blur">会员解锁</dd></div>
-    </dl>
-    <p class="card-foot">{% if cfg.membership.require_payment %}会员解锁完整资料与 9 宫格解读{% else %}免费注册即可看完整资料{% endif %}</p>
-    {% else %}
-    <dl class="mini">
-      <div><dt>发行价</dt><dd>{{ fmt_fact('issue_price_rm', fv(r,'issue_price_rm')) }}</dd></div>
-      <div><dt>IPO 市值</dt><dd>{{ fmt_fact('market_cap_rm', fv(r,'market_cap_rm')) }}</dd></div>
-      <div><dt>超额认购</dt><dd>{{ fmt_fact('oversub_public', fv(r,'oversub_public')) }}</dd></div>
-      <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
-    </dl>
-    {% if r.first_day_pct is not none %}<p class="perf {{ 'up' if r.first_day_pct >= 0 else 'down' }}">首日开盘 {{ '%+.2f'|format(r.first_day_pct) }}%</p>{% endif %}
-    <p class="card-foot">{{ r.sources|length }} 个来源{% if not r.has_official %} · <span class="warn">待补官方文件</span>{% endif %} · <span class="free-tag">免费</span></p>
-    {% endif %}
+<section class="summary">
+  <a class="sum-card" href="{{ 'ipo/' ~ home.next_close[1].slug ~ '.html' if home.next_close else '#all' }}">
+    <span class="sum-k">{% if home.next_close %}最近截止认购{% else %}认购中{% endif %}</span>
+    <b class="sum-v">{% if home.next_close %}{{ home.next_close[1].name_zh }}{% else %}{{ counts.open }} 家{% endif %}</b>
+    <span class="sum-s">{% if home.next_close %}{{ fmt_fact('app_close', home.next_close[0]) }}{% else %}目前没有开放认购{% endif %}</span>
+    <span class="sum-ic tone-mint" aria-hidden="true">⏳</span>
   </a>
-{% endfor %}
+  <a class="sum-card" href="{{ 'ipo/' ~ home.next_listing[1].slug ~ '.html' if home.next_listing else '#all' }}">
+    <span class="sum-k">下一个上市</span>
+    <b class="sum-v">{% if home.next_listing %}{{ home.next_listing[1].name_zh }}{% else %}暂无{% endif %}</b>
+    <span class="sum-s">{% if home.next_listing %}{{ fmt_fact('listing_date', home.next_listing[0]) }}{% else %}等待新招股书{% endif %}</span>
+    <span class="sum-ic tone-sky" aria-hidden="true">🗓️</span>
+  </a>
 </section>
-<p class="empty" hidden>没有符合条件的 IPO。</p>
+
+{% if home.live %}
+<section class="rail-sec">
+  <div class="sec-head"><h2>认购中 &amp; 即将上市</h2><a class="arrow" href="index.html?s=upcoming#all" aria-label="看全部">→</a></div>
+  <div class="rail">{% for r in home.live %}{{ tile(r) }}{% endfor %}</div>
+</section>
+{% endif %}
+
+{% if home.listed %}
+<section class="rail-sec">
+  <div class="sec-head"><h2>最近上市</h2><a class="arrow" href="index.html?s=listed#all" aria-label="看全部">→</a></div>
+  <div class="rail">{% for r in home.listed %}{{ tile(r) }}{% endfor %}</div>
+</section>
+{% endif %}
+
+<section class="all-sec" id="all">
+  <div class="sec-head"><h2>全部 IPO <small>{{ recs|length }} 家</small></h2></div>
+  <div class="filters" aria-label="筛选">
+    <div class="chips" data-filter="status">
+      <button class="chip on" data-v="all">全部</button>
+      <button class="chip" data-v="open">认购中</button>
+      <button class="chip" data-v="upcoming">即将上市</button>
+      <button class="chip" data-v="listed">已上市</button>
+    </div>
+    <div class="chips" data-filter="market">
+      <button class="chip on" data-v="all">所有市场</button>
+      <button class="chip" data-v="Main">主板</button>
+      <button class="chip" data-v="ACE">ACE</button>
+      <button class="chip" data-v="LEAP">LEAP</button>
+    </div>
+    <div class="chips" data-filter="shariah">
+      <button class="chip on" data-v="all">不限</button>
+      <button class="chip" data-v="1">伊斯兰合规</button>
+    </div>
+  </div>
+  <div class="cards">
+  {% for r in recs %}
+    <a class="card" href="ipo/{{ r.slug }}.html" data-status="{{ r.status }}" data-market="{{ fv(r,'market') }}" data-shariah="{{ 1 if is_shariah(r) else 0 }}" data-q="{{ r.name|lower }} {{ r.name_zh|lower }} {{ r.sector_zh }} {{ r.stock_code or '' }}">
+      <span class="card-ic tone-{{ r.tone }}" aria-hidden="true">{{ r.icon }}</span>
+      <div class="card-main">
+        <div class="card-top">
+          <span class="status status-{{ r.status }}">{{ r.status_zh }}</span>
+          <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>
+          {% if is_shariah(r) %}<span class="mkt">伊斯兰合规</span>{% endif %}
+          {% if r.locked %}<span class="lock-badge">🔒 会员</span>{% else %}<span class="free-badge">免费</span>{% endif %}
+        </div>
+        <h3>{{ r.name_zh }}</h3>
+        <p class="sub">{{ r.name }} · {{ r.sector_zh }}</p>
+        <p class="liner">{{ r.one_liner }}</p>
+        {% if r.locked %}
+        <dl class="mini">
+          <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
+          <div><dt>发行价 · 市值</dt><dd class="blur">登入解锁</dd></div>
+        </dl>
+        {% else %}
+        <dl class="mini">
+          <div><dt>发行价</dt><dd>{{ fmt_fact('issue_price_rm', fv(r,'issue_price_rm')) }}</dd></div>
+          <div><dt>IPO 市值</dt><dd>{{ fmt_fact('market_cap_rm', fv(r,'market_cap_rm')) }}</dd></div>
+          <div><dt>超额认购</dt><dd>{{ fmt_fact('oversub_public', fv(r,'oversub_public')) }}</dd></div>
+          <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
+        </dl>
+        {% if r.first_day_pct is not none %}<p class="perf {{ 'up' if r.first_day_pct >= 0 else 'down' }}">首日开盘 {{ '%+.2f'|format(r.first_day_pct) }}%</p>{% endif %}
+        {% endif %}
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+  <p class="empty" hidden>没有符合条件的 IPO。<button class="linkish" data-reset>清除筛选</button></p>
+</section>
+
+<aside class="toast" data-toast hidden>
+  <span class="toast-ic" aria-hidden="true">⭐</span>
+  <p><b>前 4 家免费看。</b>{% if cfg.membership.require_payment %}订阅会员解锁其余 {{ home.locked }} 家{% else %}免费注册，解锁其余 {{ home.locked }} 家的 9 宫格{% endif %}</p>
+  <a class="btn sm" href="{{ 'membership.html' if cfg.membership.require_payment else 'login.html' }}">{{ '看方案' if cfg.membership.require_payment else '注册' }}</a>
+  <button class="toast-x" data-toast-x aria-label="关闭">✕</button>
+</aside>
 {% endblock %}

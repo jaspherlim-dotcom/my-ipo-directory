@@ -11,16 +11,28 @@
 <link rel="stylesheet" href="{{ depth }}static/style.css">
 {% block head %}{% endblock %}
 </head>
-<body>
-<header class="topbar">
-  <div class="wrap topbar-in">
-    <a class="brand" href="{{ depth }}index.html"><span class="brand-mark">IPO</span>{{ cfg.site_title }}</a>
-    <nav>
-      <a href="{{ depth }}index.html">IPO 列表</a>
-      <a href="{{ depth }}about.html">方法与来源</a>
-      {% if cfg.membership.require_payment %}<a href="{{ depth }}membership.html">会员</a>{% endif %}
-      <a class="nav-login" href="{{ depth }}login.html" data-auth-link>登入</a>
-    </nav>
+<body class="{% block bodyclass %}{% endblock %}">
+<header class="appbar">
+  <div class="wrap appbar-in">
+    <div class="appbar-row">
+      <a class="brand" href="{{ depth }}index.html"><span class="brand-mark">IPO</span><span class="brand-name">{{ cfg.site_title }}</span></a>
+      <nav class="desk-nav">
+        <a href="{{ depth }}index.html">首页</a>
+        <a href="{{ depth }}index.html?s=open#all">认购中</a>
+        <a href="{{ depth }}about.html">方法与来源</a>
+        {% if cfg.membership.require_payment %}<a href="{{ depth }}membership.html">会员</a>{% endif %}
+      </nav>
+    </div>
+    <div class="appbar-row">
+      <form class="searchbar" action="{{ depth }}index.html#all" role="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input class="search" name="q" type="search" placeholder="搜索公司、行业或代号" aria-label="搜索 IPO">
+      </form>
+      <a class="round-btn coin" href="{{ depth }}about.html" title="方法与来源" aria-label="方法与来源">源</a>
+      <a class="round-btn avatar" href="{{ depth }}login.html" data-auth-link title="登入" aria-label="登入 / 我的会员">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg>
+      </a>
+    </div>
   </div>
 </header>
 <main class="wrap">
@@ -32,6 +44,13 @@
     <p class="muted">资料更新：{{ built }} · 每个数字旁的 <sup class="ref">[1]</sup> 可点进原始来源</p>
   </div>
 </footer>
+<nav class="tabbar" aria-label="主要导航">
+  <a href="{{ depth }}index.html" class="{% block tab_home %}{% endblock %}"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg><span>首页</span></a>
+  <a href="{{ depth }}index.html?s=open#all"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg><span>认购中</span></a>
+  <a href="{{ depth }}index.html#all" class="tab-center" data-focus-search aria-label="搜索"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m19.5 19.5-4-4"/></svg></a>
+  <a href="{{ depth }}about.html" class="{% block tab_about %}{% endblock %}"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 12h6M9 16h6M14 3v5h5"/></svg><span>方法</span></a>
+  <a href="{{ depth }}login.html" data-auth-tab><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5"/></svg><span>我的</span></a>
+</nav>
 <script>window.SITE = {{ {"supabaseUrl": cfg.membership.supabase_url, "supabaseKey": cfg.membership.supabase_anon_key, "payMonthly": cfg.membership.payment_link_monthly, "payYearly": cfg.membership.payment_link_yearly, "requirePayment": cfg.membership.require_payment, "root": depth}|tojson }};</script>
 {% if cfg.membership.supabase_url %}<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>{% endif %}
 <script src="{{ depth }}static/app.js"></script>

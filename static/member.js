@@ -39,8 +39,11 @@
 
   // 顶部导航：已登入就显示“我的会员”
   async function nav(user) {
+    if (!user) return;
     var a = $("[data-auth-link]");
-    if (a && user) { a.textContent = "我的会员"; a.href = root + "account.html"; }
+    if (a) { a.classList.add("on"); a.title = "我的会员"; a.href = root + "account.html"; }
+    var t = $("[data-auth-tab]");
+    if (t) t.href = root + "account.html";
   }
 
   // 登入页

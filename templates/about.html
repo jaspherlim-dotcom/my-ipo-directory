@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}方法与来源 · {{ cfg.site_title }}{% endblock %}
+{% block tab_about %}on{% endblock %}
 {% block body %}
 <section class="hero small">
   <p class="eyebrow">方法与来源</p>
@@ -10,6 +11,10 @@
   <h2>两层内容，分得清清楚楚</h2>
   <p><b>① 已查证事实</b>：发行价、市值、超额认购、日期等，每一个数字旁边都有 <sup class="ref">[1]</sup> 来源编号，点进去就是原文。</p>
   <p><b>② AI 解读</b>：商业模式 9 宫格、护城河、风险等，放在有颜色的区块内，并标明“AI 撰写、未经人工审核”。每一格也会标示是 <span class="basis basis-fact">事实</span>、<span class="basis basis-inference">推论</span> 还是 <span class="basis basis-unknown">资料不足</span>。资料不够就直说，不硬凑。</p>
+
+  <h2 id="bmc">商业模式 9 宫格怎样读</h2>
+  <p>9 宫格把一家公司拆成 9 个问题：<b>卖什么价值</b>（价值主张）、<b>卖给谁</b>（客户群）、<b>怎样接触客户</b>（渠道）、<b>怎样留住客户</b>（客户关系）、<b>钱从哪里来</b>（收入来源）、<b>靠什么做到</b>（核心资源）、<b>每天在忙什么</b>（关键活动）、<b>跟谁合作</b>（重要伙伴）、<b>钱花在哪里</b>（成本结构）。</p>
+  <p>本站在 9 格之外再加三样投资者最该问的：<b>护城河</b>、<b>募资的钱流向哪里</b>、<b>上市后要追踪什么</b>。中小企业老板也可以直接拿来对照自己的生意。</p>
 
   <h2>资料来源优先次序</h2>
   <ol>

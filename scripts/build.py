@@ -88,8 +88,32 @@ def status_of(rec: dict) -> tuple[str, str]:
     return "upcoming", "即将上市"
 
 
+SECTOR_ICONS = [  # (关键词, 图标, 色调) —— 卡片顶部的插画色块
+    (("药", "医", "护理"), "💊", "mint"), (("咖啡", "食品", "餐", "饮"), "☕", "peach"),
+    (("半导体", "ICT", "科技", "软件"), "💻", "sky"), (("天线", "电子"), "📡", "sky"),
+    (("信托", "商场", "酒店"), "🏬", "lilac"), (("房地产", "物业"), "🏘️", "lilac"),
+    (("数据中心", "机电", "HVAC", "消防"), "🛠️", "sand"), (("再生能源", "环保", "能源"), "⚡", "sand"),
+    (("化学", "化工"), "🧪", "mint"), (("铝", "铜", "材料", "金属"), "🧱", "sand"),
+    (("外劳", "宿舍", "人力"), "👷", "peach"), (("旅游", "MICE"), "✈️", "sky"),
+    (("制造", "工业"), "🏭", "sand"), (("工程",), "🏗️", "sand"),
+]
+
+
+def is_shariah(rec: dict) -> bool:
+    v = str(fv(rec, "shariah") or "")
+    return "符合" in v and "不" not in v
+
+
+def sector_art(sector: str) -> tuple[str, str]:
+    for words, icon, tone in SECTOR_ICONS:
+        if any(w in (sector or "") for w in words):
+            return icon, tone
+    return "📈", "mint"
+
+
 def enrich(rec: dict) -> dict:
     rec["status"], rec["status_zh"] = status_of(rec)
+    rec["icon"], rec["tone"] = sector_art(rec.get("sector_zh", ""))
     src_ids = list(rec["sources"].keys())
     rec["src_index"] = {sid: i + 1 for i, sid in enumerate(src_ids)}
     rec["key_facts"] = [(k, FACT_LABELS[k], fmt_fact(k, rec["facts"][k]["v"]), rec["facts"][k])
@@ -111,7 +135,7 @@ def enrich(rec: dict) -> dict:
 def main() -> None:
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
     env.globals.update(LABELS=FACT_LABELS, cfg=CONFIG, MARKET_ZH=MARKET_ZH, KIND_ZH=KIND_ZH, BASIS_ZH=BASIS_ZH, BMC_ZH=BMC_ZH,
-                       built=TODAY.isoformat(), fmt_fact=fmt_fact, fv=fv, ringgit=ringgit)
+                       built=TODAY.isoformat(), fmt_fact=fmt_fact, fv=fv, ringgit=ringgit, is_shariah=is_shariah)
     recs = [enrich(json.loads(p.read_text(encoding="utf-8"))) for p in sorted((ROOT / "data" / "ipos").glob("*.json"))]
     order = {"open": 0, "upcoming": 1, "listed": 2}
     def sort_key(r):
@@ -135,7 +159,18 @@ def main() -> None:
     shutil.copytree(ROOT / "static", DIST / "static")
 
     counts = {k: sum(1 for r in recs if r["status"] == k) for k in order}
-    (DIST / "index.html").write_text(env.get_template("index.html").render(recs=recs, counts=counts, depth=""), encoding="utf-8")
+    today = TODAY.isoformat()
+    closing = sorted((fv(r, "app_close"), r) for r in recs if fv(r, "app_close") and fv(r, "app_close") >= today)
+    listing = sorted((fv(r, "listing_date"), r) for r in recs if r["status"] != "listed" and fv(r, "listing_date"))
+    home = {
+        "next_close": closing[0] if closing else None,
+        "next_listing": listing[0] if listing else None,
+        "live": [r for r in recs if r["status"] != "listed"],
+        "listed": [r for r in recs if r["status"] == "listed"],
+        "shariah": sum(1 for r in recs if is_shariah(r)),
+        "locked": sum(1 for r in recs if r["locked"]),
+    }
+    (DIST / "index.html").write_text(env.get_template("index.html").render(recs=recs, counts=counts, home=home, depth=""), encoding="utf-8")
     (DIST / "about.html").write_text(env.get_template("about.html").render(changelog=changelog, depth=""), encoding="utf-8")
     for name in ("login", "account", "membership"):
         (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html").render(depth=""), encoding="utf-8")
