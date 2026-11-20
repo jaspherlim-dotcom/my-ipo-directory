@@ -44,6 +44,12 @@ jobs:
       - name: 生成网站
         run: python scripts/build.py
 
+      - name: 上传会员内容到 Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/publish_premium.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

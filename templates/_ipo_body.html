@@ -1,0 +1,133 @@
+{% from "_macros.html" import refs, basis %}
+{% if r.todo_official or r.conflicts %}
+<aside class="notice">
+  {% if r.todo_official %}<p><b>资料完整度：</b>{{ r.todo_official }}</p>{% endif %}
+  {% for c in r.conflicts or [] %}
+  <p><b>⚠ 资料冲突：</b>{{ LABELS.get(c.key, c.key) }} 现有 {{ c.existing }}，另一来源 <a class="ref" href="#src-{{ c.src }}">[{{ r.src_index[c.src] }}]</a> 写 {{ c.new }}，待人工核实。</p>
+  {% endfor %}
+</aside>
+{% endif %}
+
+<div class="layer-label fact-label"><span>①</span> 已查证事实 <small>每个数字都可点击查看来源</small></div>
+
+<section class="facts">
+  {% for k, label, val, fact in r.key_facts %}
+  <div class="fact{% if k == 'adviser' %} wide{% endif %}">
+    <span class="fk">{{ label }}</span>
+    <span class="fvv">{{ val }}{{ refs(r, fact) }}</span>
+    {% if fact.note %}<span class="fn">{{ fact.note }}</span>{% endif %}
+  </div>
+  {% endfor %}
+  {% if r.first_day_pct is not none %}
+  <div class="fact"><span class="fk">首日开盘 vs 发行价</span><span class="fvv {{ 'up' if r.first_day_pct >= 0 else 'down' }}">{{ '%+.2f'|format(r.first_day_pct) }}%</span><span class="fn">本站按上面两个数字计算</span></div>
+  {% endif %}
+</section>
+
+{% if r.facts.business %}
+<section class="block">
+  <h2>它做什么生意</h2>
+  <p>{{ r.facts.business.v }}{{ refs(r, r.facts.business) }}{% if r.facts.business_extra %} {{ r.facts.business_extra.v }}{{ refs(r, r.facts.business_extra) }}{% endif %}</p>
+</section>
+{% endif %}
+
+{% if r.timeline %}
+<section class="block">
+  <h2>时间线</h2>
+  <ol class="timeline">
+    {% for iso, label, val, fact in r.timeline %}
+    <li class="{{ 'past' if iso <= built else 'future' }}"><span class="tl-date">{{ val }}</span><span class="tl-ev">{{ label }}{{ refs(r, fact) }}</span></li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% if r.use_of_proceeds %}
+<section class="block">
+  <h2>募资拿去做什么</h2>
+  <div class="uop">
+    {% for u in r.use_of_proceeds %}
+    <div class="uop-row">
+      <div class="uop-txt"><span>{{ u.item }}</span><b>{{ u.rm_fmt }} <small>{{ u.pct }}%</small>{{ refs(r, u) }}</b></div>
+      <div class="bar"><i style="width: {{ u.pct }}%"></i></div>
+      {% if u.note %}<p class="fn">{{ u.note }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  <p class="fn">百分比由本站按各项金额计算。</p>
+</section>
+{% endif %}
+
+{% if r.allocation %}
+<section class="block">
+  <h2>股份分配</h2>
+  <table class="tbl">
+    <thead><tr><th>对象</th><th>股数</th></tr></thead>
+    <tbody>{% for a in r.allocation %}<tr><td>{{ a.item }}</td><td class="num">{{ '{:,.0f}'.format(a.shares) }}{{ refs(r, a) }}</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+{% endif %}
+
+{% if r.financials %}
+<section class="block">
+  <h2>财务数字</h2>
+  <table class="tbl">
+    <thead><tr><th>项目</th><th>期间</th><th>金额</th></tr></thead>
+    <tbody>{% for f in r.financials %}<tr><td>{{ f.label }}</td><td>{{ f.period }}</td><td class="num">{{ ringgit(f.rm) }}{{ refs(r, f) }}</td></tr>
+    {% if f.note %}<tr class="note-row"><td colspan="3">{{ f.note }}</td></tr>{% endif %}{% endfor %}</tbody>
+  </table>
+</section>
+{% endif %}
+
+{% for q in r.quotes or [] %}
+<blockquote class="quote">“{{ q.text }}”<cite>— {{ q.who }} <a class="ref" href="#src-{{ q.src }}">[{{ r.src_index[q.src] }}]</a></cite></blockquote>
+{% endfor %}
+
+{% if r.analysis %}{% set a = r.analysis %}
+<div class="ai-zone">
+  <div class="layer-label ai-label"><span>②</span> AI 解读 <small>由 AI 根据上方事实撰写{% if not a.reviewed %}，未经人工审核{% endif %} · {{ a.generated_at }}</small></div>
+
+  <p class="ai-summary">{{ a.summary }}</p>
+
+  <h2>商业模式 9 宫格</h2>
+  <p class="fn">每格右上角标明依据：<span class="basis basis-fact">事实</span> 来自上方资料、<span class="basis basis-inference">推论</span> 是 AI 的合理推断、<span class="basis basis-unknown">资料不足</span> 代表公开资料没写。</p>
+  <div class="bmc">
+    {% for key in ['key_partners','key_activities','key_resources','value_propositions','customer_relationships','channels','customer_segments','cost_structure','revenue_streams'] %}
+    {% set b = a.bmc[key] %}
+    <div class="bmc-cell bmc-{{ key }}">
+      <div class="bmc-h"><b>{{ BMC_ZH[key][0] }}</b>{{ basis(b.basis) }}</div>
+      <p class="bmc-q">{{ BMC_ZH[key][1] }}</p>
+      <p>{{ b.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h2>9 宫格之外：投资者真正要问的</h2>
+  <div class="plus">
+    <div><h3>🏰 护城河</h3><p>{{ a.moat }}</p></div>
+    <div><h3>💸 钱流向哪里</h3><p>{{ a.money_flow }}</p></div>
+    <div><h3>🔭 上市后要追踪</h3><ul>{% for w in a.watch %}<li>{{ w }}</li>{% endfor %}</ul></div>
+  </div>
+
+  <div class="two">
+    <div class="panel"><h3>给投资者</h3><p>{{ a.investor_takeaway }}</p></div>
+    <div class="panel"><h3>给中小企业老板</h3><ul>{% for s in a.sme_lessons %}<li>{{ s }}</li>{% endfor %}</ul></div>
+  </div>
+
+  <h2>主要风险</h2>
+  <div class="risks">
+    {% for k in a.risks %}<div class="risk"><div class="bmc-h"><b>{{ k.title }}</b>{{ basis(k.basis) }}</div><p>{{ k.detail }}</p></div>{% endfor %}
+  </div>
+  <p class="fn">以上解读不构成投资建议。AI 可能误读资料，请以招股书为准。</p>
+</div>
+{% endif %}
+
+<section class="block" id="sources">
+  <h2>资料来源</h2>
+  <ol class="sources">
+    {% for sid, s in r.sources.items() %}
+    <li id="src-{{ sid }}"><span class="kind kind-{{ s.kind }}">{{ KIND_ZH.get(s.kind, s.kind) }}</span>
+      <a href="{{ s.url }}" target="_blank" rel="noopener nofollow">{{ s.title }}</a>
+      <span class="muted">{{ s.publisher }}{% if s.date %} · {{ s.date }}{% endif %}</span></li>
+    {% endfor %}
+  </ol>
+</section>

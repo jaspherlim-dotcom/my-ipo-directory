@@ -119,6 +119,12 @@ def main() -> None:
 
     recs.sort(key=sort_key)
 
+    # 会员制：列表最前面 free_count 家免费，其余锁起来（完整内容只上传到会员后台，不放进公开网站）
+    m = CONFIG.get("membership", {})
+    free_slugs = set(m.get("free_slugs") or [r["slug"] for r in recs[: m.get("free_count", 4)]]) if m.get("enabled") else {r["slug"] for r in recs}
+    for r in recs:
+        r["locked"] = r["slug"] not in free_slugs
+
     changelog_p = ROOT / "data" / "changelog.json"
     changelog = json.loads(changelog_p.read_text(encoding="utf-8")) if changelog_p.exists() else []
 
@@ -130,11 +136,20 @@ def main() -> None:
     counts = {k: sum(1 for r in recs if r["status"] == k) for k in order}
     (DIST / "index.html").write_text(env.get_template("index.html").render(recs=recs, counts=counts, depth=""), encoding="utf-8")
     (DIST / "about.html").write_text(env.get_template("about.html").render(changelog=changelog, depth=""), encoding="utf-8")
+    for name in ("login", "account", "membership"):
+        (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html").render(depth=""), encoding="utf-8")
+    PREMIUM = ROOT / "premium_out"
+    if PREMIUM.exists():
+        shutil.rmtree(PREMIUM)
+    PREMIUM.mkdir()
+    body = env.get_template("_ipo_body.html")
     for r in recs:
         (DIST / "ipo" / f"{r['slug']}.html").write_text(env.get_template("ipo.html").render(r=r, depth="../"), encoding="utf-8")
-    (DIST / "data.json").write_text(json.dumps([{k: r[k] for k in ("slug", "name", "facts", "sources")} for r in recs], ensure_ascii=False), encoding="utf-8")
+        if r["locked"]:
+            (PREMIUM / f"{r['slug']}.html").write_text(body.render(r=r, depth="../"), encoding="utf-8")
+    (DIST / "data.json").write_text(json.dumps([{k: r[k] for k in ("slug", "name", "facts", "sources")} for r in recs if not r["locked"]], ensure_ascii=False), encoding="utf-8")
     (DIST / ".nojekyll").write_text("")
-    print(f"已生成 {len(recs)} 家 IPO 页面 → {DIST}")
+    print(f"已生成 {len(recs)} 家 IPO 页面（免费 {len(recs) - sum(r['locked'] for r in recs)} 家，会员 {sum(r['locked'] for r in recs)} 家）→ {DIST}")
 
 
 if __name__ == "__main__":

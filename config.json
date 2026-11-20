@@ -3,8 +3,42 @@
   "site_tagline": "每一个数字都附来源，每一个解读都标明是 AI 写的",
   "base_url": "",
   "source_kinds": {
-    "official": ["bursamalaysia.com", "sc.com.my", "bnm.gov.my"],
-    "news": ["thestar.com.my", "theedgemalaysia.com", "nst.com.my", "bernama.com", "thesun.my", "businesstoday.com.my", "malaymail.com", "freemalaysiatoday.com", "sinchew.com.my", "chinapress.com.my", "orientaldaily.com.my"],
-    "aggregator": ["rates.my", "isaham.my", "klsescreener.com", "malaysiastock.biz", "minichart.com.sg"]
+    "official": [
+      "bursamalaysia.com",
+      "sc.com.my",
+      "bnm.gov.my"
+    ],
+    "news": [
+      "thestar.com.my",
+      "theedgemalaysia.com",
+      "nst.com.my",
+      "bernama.com",
+      "thesun.my",
+      "businesstoday.com.my",
+      "malaymail.com",
+      "freemalaysiatoday.com",
+      "sinchew.com.my",
+      "chinapress.com.my",
+      "orientaldaily.com.my"
+    ],
+    "aggregator": [
+      "rates.my",
+      "isaham.my",
+      "klsescreener.com",
+      "malaysiastock.biz",
+      "minichart.com.sg"
+    ]
+  },
+  "membership": {
+    "enabled": true,
+    "free_count": 4,
+    "free_slugs": [],
+    "price_monthly": "RM29",
+    "price_yearly": "RM290",
+    "supabase_url": "",
+    "supabase_anon_key": "",
+    "payment_link_monthly": "",
+    "payment_link_yearly": "",
+    "require_payment": false
   }
 }

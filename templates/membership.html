@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}会员方案 · {{ cfg.site_title }}{% endblock %}
+{% block body %}
+<section class="hero small">
+  <p class="eyebrow">会员方案</p>
+  <h1>每个马股 IPO，上市前就看懂它的生意。</h1>
+  <p class="lede">免费版每次开放 {{ cfg.membership.free_count }} 家；会员可以看全部 IPO 的完整资料、募资拆解、商业模式 9 宫格、风险分析和上市后追踪重点。</p>
+</section>
+<section class="plans">
+  <div class="plan">
+    <h2>免费</h2>
+    <p class="price">RM0</p>
+    <ul><li>列表最前面 {{ cfg.membership.free_count }} 家 IPO 完整内容</li><li>其余 IPO 的公司名称、行业与上市日期</li><li>方法与来源说明</li></ul>
+  </div>
+  <div class="plan featured">
+    <h2>月费会员</h2>
+    <p class="price">{{ cfg.membership.price_monthly }}<small> / 月</small></p>
+    <ul><li>所有 IPO 完整资料（每个数字附来源）</li><li>商业模式 9 宫格 + 护城河 + 风险</li><li>每天自动更新新 IPO</li><li>随时取消</li></ul>
+    <button class="btn" data-subscribe="monthly">订阅月费</button>
+  </div>
+  <div class="plan">
+    <h2>年费会员</h2>
+    <p class="price">{{ cfg.membership.price_yearly }}<small> / 年</small></p>
+    <ul><li>月费会员全部内容</li><li>一次付一年，比月费省</li></ul>
+    <button class="btn ghost" data-subscribe="yearly">订阅年费</button>
+  </div>
+</section>
+<p class="fn" data-subscribe-msg></p>
+<p class="fn">本站内容只供学习与研究，不构成投资建议，也不推荐买卖任何股票。</p>
+{% endblock %}

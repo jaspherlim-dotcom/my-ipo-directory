@@ -51,3 +51,21 @@ cd dist && python -m http.server 8000   # 打开 http://localhost:8000
 - 优先官方来源；第三方整理网站只作交叉参考。
 - 遵守 robots.txt，不抓不允许的网站。
 - 网站内容不构成投资建议。
+
+## 会员系统（免费 4 家 + 登入解锁）
+
+架构：公开网站只放免费的几家；其余公司的完整内容在 build 时生成到 `premium_out/`，由 GitHub Actions 上传到 Supabase 的 `premium_pages` 表。数据库规则（RLS）只让合格会员读取，所以别人看网页源码也拿不到。
+
+- `config.json → membership`：`free_count`（免费几家，默认列表最前面 4 家）、`free_slugs`（想指定哪几家免费就填 slug）、`require_payment`（false = 只要免费注册登入；true = 要付费会员）。
+- 登入方式：电邮登入链接（Supabase Auth），不用密码。
+
+### 设置步骤
+1. 到 supabase.com 开免费项目，在 SQL Editor 执行 `supabase/schema.sql`。
+2. Authentication → URL Configuration：Site URL 填网站网址。
+3. 把 Project URL 和 anon key 填进 `config.json` 的 `supabase_url`、`supabase_anon_key`（这两个本来就是公开的）。
+4. GitHub 仓库 Secrets 加：`SUPABASE_URL`、`SUPABASE_SERVICE_ROLE_KEY`（service key 绝对不能放进网页）。
+
+### 以后开始收费（Stripe）
+1. Stripe 建两个订阅价格（月费、年费），各开一个 Payment Link，填进 `payment_link_monthly / yearly`。
+2. 部署 webhook：`supabase functions deploy stripe-webhook --no-verify-jwt`，设 secrets `STRIPE_SECRET_KEY`、`STRIPE_WEBHOOK_SECRET`；在 Stripe 把 webhook 指向该函数网址，事件选 `checkout.session.completed`、`customer.subscription.updated`、`customer.subscription.deleted`。
+3. Supabase 执行：`update public.site_settings set value = 'true' where key = 'require_payment';`，并把 `config.json` 的 `require_payment` 改成 `true`。

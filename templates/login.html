@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}登入 · {{ cfg.site_title }}{% endblock %}
+{% block body %}
+<section class="auth-box">
+  <h1>登入 / 注册</h1>
+  <p class="muted">输入电邮，我们会寄一个登入链接给你，点一下就登入，不用记密码。第一次使用会自动注册。</p>
+  <form id="login-form" class="form">
+    <label for="email">电邮</label>
+    <input id="email" type="email" required placeholder="you@example.com" autocomplete="email">
+    <button class="btn" type="submit">寄登入链接</button>
+  </form>
+  <p class="fn" data-login-msg></p>
+</section>
+{% endblock %}

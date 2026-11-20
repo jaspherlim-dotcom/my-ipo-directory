@@ -11,6 +11,11 @@
   </div>
 </section>
 
+<aside class="member-banner">
+  <div><b>前 4 家 IPO 免费看。</b>{% if cfg.membership.require_payment %}其余公司的完整资料、募资拆解和商业模式 9 宫格，会员登入即可解锁。{% else %}其余公司的完整资料和商业模式 9 宫格，<b>免费注册</b>登入就能看。{% endif %}</div>
+  {% if cfg.membership.require_payment %}<a class="btn" href="membership.html">查看会员方案</a>{% else %}<a class="btn" href="login.html">免费注册</a>{% endif %}
+</aside>
+
 <section class="filters" aria-label="筛选">
   <div class="chips" data-filter="status">
     <button class="chip on" data-v="all">全部</button>
@@ -35,10 +40,18 @@
       <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>
       {% if fv(r,'shariah') %}<span class="mkt">伊斯兰合规</span>{% endif %}
     </div>
+    {% if r.locked %}<span class="lock-badge">🔒 会员</span>{% endif %}
     <h2>{{ r.name_zh }}</h2>
     <p class="sub">{{ r.name }}</p>
     <p class="sector">{{ r.sector_zh }}</p>
     <p class="liner">{{ r.one_liner }}</p>
+    {% if r.locked %}
+    <dl class="mini">
+      <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
+      <div><dt>发行价 · 市值 · 认购</dt><dd class="blur">会员解锁</dd></div>
+    </dl>
+    <p class="card-foot">{% if cfg.membership.require_payment %}会员解锁完整资料与 9 宫格解读{% else %}免费注册即可看完整资料{% endif %}</p>
+    {% else %}
     <dl class="mini">
       <div><dt>发行价</dt><dd>{{ fmt_fact('issue_price_rm', fv(r,'issue_price_rm')) }}</dd></div>
       <div><dt>IPO 市值</dt><dd>{{ fmt_fact('market_cap_rm', fv(r,'market_cap_rm')) }}</dd></div>
@@ -46,7 +59,8 @@
       <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
     </dl>
     {% if r.first_day_pct is not none %}<p class="perf {{ 'up' if r.first_day_pct >= 0 else 'down' }}">首日开盘 {{ '%+.2f'|format(r.first_day_pct) }}%</p>{% endif %}
-    <p class="card-foot">{{ r.sources|length }} 个来源{% if not r.has_official %} · <span class="warn">待补官方文件</span>{% endif %}</p>
+    <p class="card-foot">{{ r.sources|length }} 个来源{% if not r.has_official %} · <span class="warn">待补官方文件</span>{% endif %} · <span class="free-tag">免费</span></p>
+    {% endif %}
   </a>
 {% endfor %}
 </section>
