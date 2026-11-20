@@ -1,0 +1,60 @@
+{
+  "slug": "ioipg-reit",
+  "name": "IOIPG Malaysia Real Estate Investment Trust",
+  "name_zh": "IOIPG 产托（IOIREIT）",
+  "stock_code": "5359",
+  "sector_zh": "产业信托 · 商场 / 酒店 / 办公楼",
+  "one_liner": "IOI 产业把 IOI City Mall、六间酒店和六栋办公楼打包上市的产托，收租派息。",
+  "instrument": "REIT",
+  "facts": {
+    "market": {"v": "Main", "src": ["s1", "s2"]},
+    "business": {"v": "产业投资信托，资产包括 IOI City Mall、六间酒店及六栋办公楼。", "src": ["s2"]},
+    "issue_price_rm": {"v": 0.91, "src": ["s1", "s2"], "note": "机构及最终散户价均为 91 仙；据 rates.my，比原定散户价 96 仙低 5 仙"},
+    "proceeds_rm": {"v": 2000000000, "src": ["s1"], "note": "约 RM20 亿，所得归 IOIPG（母公司献售），不是产托本身"},
+    "market_cap_rm": {"v": 5000000000, "src": ["s1"], "note": "约 RM50 亿"},
+    "oversub_public": {"v": 0.59, "src": ["s1", "s2"], "note": "The Star 写“公众部分 1.59 倍”（申请 1.75 亿单位 / 1.1 亿单位）= 超额认购 0.59 倍。土著部分只有 0.33 倍，非土著部分 2.85 倍。"},
+    "applications": {"v": 10859, "src": ["s1"]},
+    "ballot_date": {"v": "2026-11-12", "src": ["s2"]},
+    "listing_date": {"v": "2026-11-25", "src": ["s2"]},
+    "yield_pct": {"v": 6.96, "src": ["s1"], "note": "预测分派收益率，基于截至 2027 年 6 月 30 日财政期年化每单位 6.33 仙"},
+    "adviser": {"v": "Maybank IB；联合：AmInvestment Bank", "src": ["s2"]}
+  },
+  "use_of_proceeds": [],
+  "financials": [],
+  "sources": {
+    "s1": {"title": "IOIPG Malaysia REIT fixes IPO price at 91 sen per unit", "publisher": "The Star", "kind": "news", "date": "2026-11-12", "url": "https://www.thestar.com.my/business/business-news/2026/11/12/ioipg-malaysia-reit-fixes-ipo-price-at-91-sen-per-unit"},
+    "s2": {"title": "IOIPG Malaysia REIT IPO", "publisher": "rates.my", "kind": "aggregator", "date": "2026-11", "url": "https://rates.my/ipo/ioipg-malaysia-reit"},
+    "s3": {"title": "Prospectus Exposure - IOIPG Malaysia Real Estate Investment Trust", "publisher": "Securities Commission Malaysia", "kind": "official", "date": null, "url": "https://www.sc.com.my/resources/prospectus-exposure/prospectus-exposure-ioipg-malaysia-real-estate-investment-trust"}
+  },
+  "todo_official": "上市日期与顾问目前只来自第三方聚合网站，待以 Bursa 公告确认。SC 招股书预览（s3）已链接，未逐项核对。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": ["s1", "s2"],
+    "summary": "这是“房东”型生意：IOI 产业把成熟的商场、酒店和办公楼卖进产托，回笼约 RM20 亿现金；买产托的人则换来每年收租派息。降价到 91 仙，加上公众认购偏冷，说明市场对价格是精打细算的。",
+    "bmc": {
+      "customer_segments": {"text": "两边客户：① 商场租户、酒店住客、办公楼租户；② 想要稳定派息的单位持有人。", "basis": "inference"},
+      "value_propositions": {"text": "对投资者：用 91 仙参与大型商场与商业资产的租金收入，预测收益率 6.96%。对 IOIPG：资产变现，回收资本再投资。", "basis": "fact"},
+      "channels": {"text": "资产本身（IOI City Mall 等）就是渠道；单位在 Bursa 主板交易。", "basis": "inference"},
+      "customer_relationships": {"text": "租约制，长期租户关系；酒店则受旅游与入住率影响。", "basis": "inference"},
+      "revenue_streams": {"text": "商场与办公楼租金、酒店收入（或酒店租约）。各资产占比新闻未披露。", "basis": "inference"},
+      "key_resources": {"text": "IOI City Mall、六间酒店、六栋办公楼。", "basis": "fact"},
+      "key_activities": {"text": "资产管理、招租、物业维护、派息。", "basis": "inference"},
+      "key_partners": {"text": "保荐人 IOIPG（同时可能是物业管理方）、受托人、银行。", "basis": "inference"},
+      "cost_structure": {"text": "物业营运成本、管理费、融资利息；利率走势直接影响派息能力。", "basis": "inference"}
+    },
+    "moat": "大型地标商场有地段护城河，不容易被复制；但酒店和办公楼面对供应过剩与远程办公的长期压力。",
+    "money_flow": "这次主要是 IOIPG 献售，约 RM20 亿归母公司，不是产托拿去扩张。读者要分清：你买的是现成资产的收租权，不是增长故事。",
+    "watch": ["实际派息是否达到预测 6.33 仙（年化）", "IOI City Mall 出租率与续租租金", "酒店入住率", "负债比率与利率走势", "关联交易（向 IOIPG 收购更多资产时的价格）"],
+    "investor_takeaway": "看产托别只看收益率，要看收益率背后的资产质量和关联交易治理。公众部分只超额认购 0.59 倍、土著部分甚至认购不足，说明散户不追高。",
+    "sme_lessons": ["资产变现思维：IOI 用产托把“死”的物业变成现金，中小企业也可以想想手上的厂房是否适合售后回租。", "定价比故事重要：大品牌也要降价才卖得动，好资产不等于任何价钱都好。"],
+    "risks": [
+      {"title": "利率风险", "detail": "利率上升会推高融资成本，也会让 6.96% 的收益率显得没那么吸引。", "basis": "inference"},
+      {"title": "资产集中", "detail": "资产主要集中在 IOI 体系的少数物业，单一商场表现影响很大。", "basis": "inference"},
+      {"title": "关联交易", "detail": "保荐人 IOIPG 同时是卖方，未来注入资产的定价需留意是否公平。", "basis": "inference"},
+      {"title": "认购偏冷", "detail": "公众部分超额认购仅 0.59 倍，土著部分 0.33 倍，上市初期需求可能有限。", "basis": "fact"}
+    ]
+  }
+}

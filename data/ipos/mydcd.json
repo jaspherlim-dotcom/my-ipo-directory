@@ -1,0 +1,68 @@
+{
+  "slug": "mydcd",
+  "name": "MyDCD Berhad",
+  "name_zh": "MyDCD",
+  "stock_code": null,
+  "sector_zh": "工程服务 · 数据中心机电",
+  "one_liner": "帮数据中心做机电、管道和消防系统整合，以及后续维护的工程服务公司。",
+  "facts": {
+    "market": {"v": "ACE", "src": ["s1", "s2"]},
+    "business": {"v": "为关键基础设施（主要是数据中心）提供机电、管道及消防（MEPF）系统整合工程，项目以企业自用和托管型（colocation）数据中心为主，另有维护业务；业务集中在巴生谷。", "src": ["s1"]},
+    "issue_price_rm": {"v": 0.56, "src": ["s1", "s2"]},
+    "new_shares": {"v": 335000000, "src": ["s1", "s2"]},
+    "ofs_shares": {"v": 145000000, "src": ["s1", "s2"]},
+    "proceeds_rm": {"v": 187600000, "src": ["s1"], "note": "公开发售新股所得（公司拿到的钱）"},
+    "market_cap_rm": {"v": 1000000000, "src": ["s1"], "note": "以 IPO 价计算，扩大后股本约 17.94 亿股"},
+    "enlarged_shares": {"v": 1794000000, "src": ["s1"]},
+    "app_open": {"v": "2026-10-26", "src": ["s1"]},
+    "app_close": {"v": "2026-11-02", "src": ["s1"]},
+    "listing_date": {"v": "2026-11-17", "src": ["s1", "s2"]},
+    "oversub_public": {"v": 36.46, "src": ["s2"], "note": "公众部分整体；土著部分 24 倍，其他马来西亚公众部分 48.92 倍"},
+    "applications": {"v": 28816, "src": ["s2"]},
+    "first_day_open_rm": {"v": 0.48, "src": ["s3"], "note": "首日开盘价，比 IPO 价低 8 仙（-14.29%）"},
+    "adviser": {"v": "TA Securities Holdings Bhd（主要顾问、保荐人、包销商及配售代理）", "src": ["s1", "s2"]}
+  },
+  "use_of_proceeds": [
+    {"item": "营运资金（项目执行、履约保证金）", "rm": 134000000, "src": ["s1"]},
+    {"item": "业务扩张（招聘、新办公室租金、员工培训）", "rm": 39900000, "src": ["s1"]},
+    {"item": "IT 系统提升", "rm": 5000000, "src": ["s1"]},
+    {"item": "上市费用", "rm": 8700000, "src": ["s1"]}
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {"title": "ACE Market-bound MyDCD aims to raise RM187.6mil from IPO", "publisher": "The Star", "kind": "news", "date": "2026-10-26", "url": "https://www.thestar.com.my/business/business-news/2026/10/26/ace-market-bound-mydcd-aims-to-raise-rm1876mil-from-ipo"},
+    "s2": {"title": "MyDCD IPO oversubscribed by 36.46 times", "publisher": "The Star", "kind": "news", "date": "2026-11-04", "url": "https://www.thestar.com.my/business/business-news/2026/11/04/mydcd-ipo-oversubscribed-by-3646-times"},
+    "s3": {"title": "MyDCD opens 14.29% below IPO price in ACE Market debut", "publisher": "Business Today", "kind": "news", "date": "2026-11-17", "url": "https://www.businesstoday.com.my/2026/11/17/mydcd-opens-14-29-below-ipo-price-in-ace-market-debut/"}
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接、财务数据（收入、净利）。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": ["s1", "s2", "s3"],
+    "summary": "简单讲，MyDCD 不是“开数据中心”的公司，而是“帮人把数据中心里面的机电系统装起来”的承包商。数据中心热，它就有工开；但它赚的是工程钱，不是租金钱。",
+    "bmc": {
+      "customer_segments": {"text": "要建企业自用或托管型数据中心的业主和开发商，目前集中在巴生谷。", "basis": "fact"},
+      "value_propositions": {"text": "一站式搞定机电、管道、消防系统整合，数据中心最怕停电过热，靠谱的机电承包商等于帮客户买“不出事”的保险。", "basis": "inference"},
+      "channels": {"text": "工程项目一般靠投标和过往业绩拿单；新闻未说明具体渠道。", "basis": "inference"},
+      "customer_relationships": {"text": "项目制合作，完工后可接维护合约，把一次性生意变成持续服务。", "basis": "inference"},
+      "revenue_streams": {"text": "① 数据中心机电工程收入（项目制）；② 维护服务收入。收入比例新闻未披露。", "basis": "fact"},
+      "key_resources": {"text": "工程团队、项目执行记录，以及开履约保证金所需的资金实力。", "basis": "inference"},
+      "key_activities": {"text": "系统设计整合、现场施工管理、调试与维护。", "basis": "inference"},
+      "key_partners": {"text": "设备供应商、分包商、银行（保证金与融资）；具体伙伴未披露。", "basis": "unknown"},
+      "cost_structure": {"text": "材料与设备、分包和人工成本为主；七成募资用作营运资金，说明这门生意很“吃现金”。", "basis": "inference"}
+    },
+    "moat": "护城河主要来自过往数据中心项目记录和执行能力，但工程承包行业门槛有限，竞争者多，议价能力未必强。",
+    "money_flow": "募资约 71% 用作营运资金（项目执行、履约保证金），说明增长要先垫钱，接越多大工程越需要现金周转。",
+    "watch": ["新接订单（order book）和数据中心以外的客户", "应收账款天数与经营现金流", "毛利率能否守住", "首日开盘已跌破发行价，留意情绪是否反映估值过高"],
+    "investor_takeaway": "数据中心热潮是真的，但工程承包商赚的是“卖铲子”的钱：周期性强、现金流易受工期影响。以 IPO 价计市值约 RM10 亿，看估值时要问：订单能维持几年？",
+    "sme_lessons": ["跟着大趋势走，但选你最擅长的那一段：MyDCD 没有去开数据中心，而是做最擅长的机电整合。", "项目型生意要提早准备现金缓冲，接大单前先算好保证金和垫款。", "工程做完别走人，维护合约才是细水长流的生意。"],
+    "risks": [
+      {"title": "客户与行业集中", "detail": "业务集中在数据中心与巴生谷，一旦数据中心投资放缓，订单会直接受影响。", "basis": "inference"},
+      {"title": "营运资金压力", "detail": "大部分募资用于营运资金与履约保证金，反映项目需要大量垫资。", "basis": "fact"},
+      {"title": "首日跌破发行价", "detail": "首日开盘 RM0.48，较 IPO 价低 14.29%，短期情绪偏弱。", "basis": "fact"},
+      {"title": "财务资料尚未收录", "detail": "本站尚未从招股书核实收入与利润数据，判断估值前请先读招股书。", "basis": "unknown"}
+    ]
+  }
+}

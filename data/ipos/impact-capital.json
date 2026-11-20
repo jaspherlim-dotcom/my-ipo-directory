@@ -1,0 +1,69 @@
+{
+  "slug": "impact-capital",
+  "name": "Impact Capital Holdings Berhad",
+  "name_zh": "Impact Capital",
+  "stock_code": null,
+  "sector_zh": "科技 · ICT 系统整合",
+  "one_liner": "为企业网络、数据中心、安保系统等关键基础设施做 ICT 系统整合、软硬件供应及维护服务。",
+  "facts": {
+    "market": {"v": "ACE", "src": ["s1", "s2"]},
+    "business": {"v": "投资控股公司，旗下子公司为关键基础设施（企业网络、数据中心、安保系统、数字孪生）整合 ICT 设备与系统，供应 ICT 硬件与软件，并提供维护支援、ITSM 实施及网络托管服务。", "src": ["s1", "s2"]},
+    "issue_price_rm": {"v": 0.22, "src": ["s1"]},
+    "new_shares": {"v": 96690000, "src": ["s1", "s2"]},
+    "ofs_shares": {"v": 28620000, "src": ["s1", "s2"]},
+    "proceeds_rm": {"v": 21270000, "src": ["s1"], "note": "公开发售新股所得"},
+    "market_cap_rm": {"v": 105600000, "src": ["s1"], "note": "以 RM0.22 及扩大后股本 4.8 亿股计算"},
+    "enlarged_shares": {"v": 480000000, "src": ["s1"]},
+    "prospectus_date": {"v": "2026-10-28", "src": ["s1"], "note": "以新闻日期为准"},
+    "listing_date": {"v": "2026-11-24", "src": ["s2"]},
+    "oversub_public": {"v": 139.69, "src": ["s2"], "note": "马来西亚公众部分；土著部分 135.15 倍，其他公众部分 144.23 倍"},
+    "applications": {"v": 15203, "src": ["s2"]},
+    "adviser": {"v": "Public Investment Bank Berhad（主要顾问、保荐人、独家包销商及配售代理）", "src": ["s1", "s2"]}
+  },
+  "use_of_proceeds": [
+    {"item": "扩充办公室（巴生谷新办公室及数字创新方案中心、民都鲁和亚庇搬迁、新山新办公室）", "rm": 4670000, "src": ["s1"]},
+    {"item": "扩充人手与业务开发", "rm": 4530000, "src": ["s1"]},
+    {"item": "技术能力提升", "rm": 2100000, "src": ["s1"]},
+    {"item": "营运资金", "rm": 5170000, "src": ["s1"]},
+    {"item": "上市费用", "rm": 4800000, "src": ["s1"]}
+  ],
+  "quotes": [
+    {"who": "Winston Chai Fung Chun，董事经理", "text": "This represents an important milestone for the Group as we move closer to our listing on the ACE Market.", "src": "s2"}
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {"title": "Impact Capital Holdings launches IPO prospectus", "publisher": "The Star", "kind": "news", "date": "2026-10-28", "url": "https://www.thestar.com.my/business/business-news/2026/10/28/impact-capital-holdings-launches-ipo-prospectus"},
+    "s2": {"title": "Impact Capital Holdings Berhad's IPO Public Portion Oversubscribed by 139.69 Times", "publisher": "Yahoo Finance（公司新闻稿）", "kind": "press_release", "date": "2026-11", "url": "https://finance.yahoo.com/markets/stocks/articles/impact-capital-holdings-berhads-ipo-173000444.html"}
+  },
+  "todo_official": "待补：Bursa 上市公告、招股书链接、财务数据。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": ["s1", "s2"],
+    "summary": "Impact Capital 是典型的 ICT “系统整合商”：帮客户挑设备、装系统、再收维护费。139 倍超额认购说明散户很热情，但热情不等于价值。",
+    "bmc": {
+      "customer_segments": {"text": "需要企业网络、数据中心、安保系统的机构客户；办公室布点在巴生谷、民都鲁、亚庇和新山，显示有东马客户基础。", "basis": "inference"},
+      "value_propositions": {"text": "客户不用自己找十个供应商，一家公司从设计、供货到维护全包。", "basis": "inference"},
+      "channels": {"text": "直接销售与项目投标；区域办公室贴近客户。", "basis": "inference"},
+      "customer_relationships": {"text": "项目完成后转入维护支援、ITSM 和网络托管服务，走长期合约路线。", "basis": "fact"},
+      "revenue_streams": {"text": "① 系统整合项目；② ICT 软硬件转售；③ 维护及托管服务。各项占比新闻未披露。", "basis": "fact"},
+      "key_resources": {"text": "技术人员与认证、品牌供应商的代理/合作资格、过往项目记录。", "basis": "inference"},
+      "key_activities": {"text": "方案设计、系统整合、维护运营，以及新设的数字创新方案中心做客户展示。", "basis": "fact"},
+      "key_partners": {"text": "国际 ICT 设备与软件品牌（未具名）。", "basis": "unknown"},
+      "cost_structure": {"text": "硬件采购成本占大头（转售生意毛利通常较薄），其次是技术人员薪酬。", "basis": "inference"}
+    },
+    "moat": "护城河较浅：系统整合门槛不高，差异化主要靠客户关系、执行记录和服务网络。维护与托管服务越多，粘性越强。",
+    "money_flow": "募资 RM21.27 百万中，近一半用于办公室和人手扩张，属于“先搭台再唱戏”，回报要看新办公室能否带来订单。",
+    "watch": ["经常性服务收入占比", "毛利率（转售 vs 服务）", "东马与新山新据点的订单贡献", "上市后首几季的应收账款"],
+    "investor_takeaway": "市值约 RM1.06 亿的小型 ICT 股，超额认购 139 倍会推高短期期待。长线要看它能不能把一次性项目转成年年收钱的服务合约。",
+    "sme_lessons": ["卖硬件赚差价不长久，加上维护合约才有经常性收入。", "区域布点要跟着客户走，东马市场常被西马公司忽略。", "上市募资先投人和据点，前提是你已经看到订单。"],
+    "risks": [
+      {"title": "超额认购带来的情绪风险", "detail": "公众部分超额认购 139.69 倍，首日波动可能很大。", "basis": "fact"},
+      {"title": "利润率偏薄", "detail": "ICT 软硬件转售普遍毛利较低，供应商涨价会挤压利润。", "basis": "inference"},
+      {"title": "扩张回报不确定", "detail": "募资大量用在办公室和人手，若订单跟不上，成本先涨收入后到。", "basis": "inference"},
+      {"title": "财务资料尚未收录", "detail": "本站尚未从招股书核实收入与利润，判断估值前请先读招股书。", "basis": "unknown"}
+    ]
+  }
+}

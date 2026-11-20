@@ -1,0 +1,59 @@
+name: 每日更新 IPO 资料并发布网站
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 每天早上 9:00（马来西亚时间）
+  workflow_dispatch: {}     # 也可以在 GitHub 上手动按“Run workflow”
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - name: 抓取并更新资料
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/update.py
+
+      - name: 把新资料存回仓库
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "ipo-bot"
+          git config user.email "ipo-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "自动更新 IPO 资料 $(date -u +%F)"
+          git push
+
+      - name: 生成网站
+        run: python scripts/build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: update-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

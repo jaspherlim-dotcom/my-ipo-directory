@@ -1,0 +1,63 @@
+{
+  "slug": "emits",
+  "name": "Emits Berhad",
+  "name_zh": "Emits",
+  "stock_code": null,
+  "sector_zh": "制造 · 天线 OEM",
+  "one_liner": "槟城的天线代工厂：帮跨国公司设计、生产、组装和测试天线，主力市场在美国。",
+  "facts": {
+    "market": {"v": "ACE", "src": ["s1"]},
+    "business": {"v": "旗下子公司为天线 OEM，提供从设计、生产、组装到测试的一条龙天线制造服务，客户主要是跨国公司，美国为主要海外市场。总部及工厂在峇六拜自由工业区，台湾另有外包组装测试线；槟城厂有四条新生产线生产 5G 基站天线。", "src": ["s1"]},
+    "issue_price_rm": {"v": 0.16, "src": ["s1"]},
+    "new_shares": {"v": 93750000, "src": ["s1"]},
+    "ofs_shares": {"v": 37500000, "src": ["s1"]},
+    "proceeds_rm": {"v": 15000000, "src": ["s1"]},
+    "market_cap_rm": {"v": 75000000, "src": ["s1"], "note": "以 IPO 价 16 仙计算"},
+    "prospectus_date": {"v": "2026-11-06", "src": ["s1"]},
+    "listing_date": {"v": "2026-12-01", "src": ["s1"]}
+  },
+  "use_of_proceeds": [
+    {"item": "新项目营运资金（5G 基站天线制造）", "rm": 6000000, "src": ["s1"]},
+    {"item": "一般营运资金", "rm": 800000, "src": ["s1"]},
+    {"item": "研发用机器与设备", "rm": 4000000, "src": ["s1"]},
+    {"item": "上市费用", "rm": 4200000, "src": ["s1"]}
+  ],
+  "financials": [
+    {"label": "收入", "period": "FY2025（截至 2025 年 12 月 31 日）", "rm": 39600000, "src": ["s1"], "note": "新闻对比数为 RM32.0 百万（文中写 2023 年）"},
+    {"label": "税后盈利", "period": "FY2025", "rm": 5200000, "src": ["s1"], "note": "新闻对比数为 RM2.2 百万，称“增长超过一倍”"}
+  ],
+  "sources": {
+    "s1": {"title": "Emits aims to raise RM15mil from IPO ahead of ACE Market listing", "publisher": "The Star", "kind": "news", "date": "2026-11-06", "url": "https://www.thestar.com.my/business/business-news/2026/11/06/emits-aims-to-raise-rm15mil-from-ipo-ahead-of-ace-market-listing"}
+  },
+  "todo_official": "待补：Bursa 上市公告、招股书链接、超额认购结果。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": ["s1"],
+    "summary": "Emits 是槟城电子供应链里的一颗小螺丝：不卖自己品牌，专门帮跨国公司代工天线。好处是有大客户撑着，坏处是命运也握在大客户手上。",
+    "bmc": {
+      "customer_segments": {"text": "跨国公司（品牌商），主要海外市场为美国。", "basis": "fact"},
+      "value_propositions": {"text": "设计到测试一站式代工，加上槟城成熟的电子供应链和成本优势。", "basis": "inference"},
+      "channels": {"text": "B2B 直接对接跨国客户的采购与工程团队。", "basis": "inference"},
+      "customer_relationships": {"text": "OEM 关系通常要经过长时间认证，一旦进入供应链，转换成本高、合作较长期。", "basis": "inference"},
+      "revenue_streams": {"text": "按订单收取的天线制造收入；FY2025 收入 RM39.6 百万、税后盈利 RM5.2 百万（据新闻）。", "basis": "fact"},
+      "key_resources": {"text": "峇六拜自由工业区工厂、台湾外包组装测试线、天线设计与测试能力。", "basis": "fact"},
+      "key_activities": {"text": "天线设计、生产、组装和测试；新增 5G 基站天线生产线。", "basis": "fact"},
+      "key_partners": {"text": "台湾外包组装测试伙伴、原材料与零件供应商。", "basis": "fact"},
+      "cost_structure": {"text": "原材料、厂房设备折旧、人工；募资 RM4 百万投入研发设备。", "basis": "inference"}
+    },
+    "moat": "护城河来自客户认证和工程能力，但规模小，议价能力有限；5G 基站天线是新业务，还需证明能接到持续订单。",
+    "money_flow": "RM15 百万募资中，约 RM6 百万押注 5G 基站天线新项目，RM4 百万用于研发设备，上市费用占 RM4.2 百万（约 28%），比例不低。",
+    "watch": ["5G 基站天线订单进度", "美国客户集中度与关税/贸易政策影响", "毛利率与汇率（美元收入）", "FY2025 盈利增长能否延续"],
+    "investor_takeaway": "以 IPO 价算市值约 RM7,500 万，按新闻披露的 FY2025 税后盈利 RM5.2 百万粗算，历史市盈率约 14 倍（本站计算，非招股书数据）。重点是增长能否持续，以及对美国市场的依赖。",
+    "sme_lessons": ["做隐形冠军也可以上市：不需要自己的品牌，专注做好某一个零件。", "进入跨国公司供应链很难，但一旦进去就是长期饭票，前期认证要舍得投入。", "小公司上市，上市费用占募资比例可以很高，要算清楚值不值。"],
+    "risks": [
+      {"title": "客户与市场集中", "detail": "主要服务跨国客户，美国为主要海外市场；大客户转单或美国贸易政策变化都会影响收入。", "basis": "fact"},
+      {"title": "新业务执行", "detail": "5G 基站天线是募资重点，若 5G 投资放缓，新产线利用率会偏低。", "basis": "inference"},
+      {"title": "规模较小", "detail": "市值约 RM7,500 万，流动性和抗风险能力有限。", "basis": "fact"},
+      {"title": "汇率风险", "detail": "以美国市场为主，美元兑令吉波动会影响盈利。", "basis": "inference"}
+    ]
+  }
+}

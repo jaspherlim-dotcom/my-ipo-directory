@@ -1,0 +1,71 @@
+{
+  "slug": "sca-solutions",
+  "name": "SCA Solutions Berhad",
+  "name_zh": "SCA Solutions",
+  "stock_code": null,
+  "sector_zh": "工程 · 机械工程",
+  "one_liner": "一家机械工程公司（新闻未详细说明产品与客户），募资主要投入雪兰莪加埔（Kapar）的厂房。",
+  "facts": {
+    "market": {"v": "ACE", "src": ["s1"]},
+    "business": {"v": "新闻仅形容为“机械工程公司”，未说明具体产品、客户或收入模式。", "src": ["s1"]},
+    "issue_price_rm": {"v": 0.28, "src": ["s1"]},
+    "new_shares": {"v": 114000000, "src": ["s1"]},
+    "ofs_shares": {"v": 56900000, "src": ["s1"]},
+    "proceeds_rm": {"v": 31920000, "src": ["s1"]},
+    "market_cap_rm": {"v": 159500000, "src": ["s1"], "note": "以 IPO 价计算，扩大后股本约 5.6963 亿股"},
+    "enlarged_shares": {"v": 569630000, "src": ["s1"]},
+    "app_open": {"v": "2026-11-18", "src": ["s1"]},
+    "app_close": {"v": "2026-11-26", "src": ["s1"]},
+    "listing_date": {"v": "2026-12-09", "src": ["s1"]},
+    "adviser": {"v": "Malacca Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）", "src": ["s1"]}
+  },
+  "allocation": [
+    {"item": "马来西亚公众（抽签）", "shares": 28500000, "src": ["s1"]},
+    {"item": "合资格人士", "shares": 5690000, "src": ["s1"]},
+    {"item": "MITI 批准的土著投资者私下配售", "shares": 71200000, "src": ["s1"]},
+    {"item": "特选投资者（新股）", "shares": 8590000, "src": ["s1"]},
+    {"item": "特选投资者（献售旧股）", "shares": 56900000, "src": ["s1"]}
+  ],
+  "use_of_proceeds": [
+    {"item": "加埔（Kapar）厂房相关营运资金", "rm": 10490000, "src": ["s1"]},
+    {"item": "偿还该厂房的定期融资", "rm": 10000000, "src": ["s1"]},
+    {"item": "装修工程", "rm": 4130000, "src": ["s1"]},
+    {"item": "综合客户体验中心／示范实验室", "rm": 1050000, "src": ["s1"]},
+    {"item": "加埔厂房相关付款", "rm": 746000, "src": ["s1"]},
+    {"item": "上市费用", "rm": 5500000, "src": ["s1"]}
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {"title": "SCA Solutions expects to raise RM31.92mil from IPO for business expansion", "publisher": "The Star", "kind": "news", "date": "2026-11-18", "url": "https://www.thestar.com.my/business/business-news/2026/11/18/sca-solutions-expects-to-raise-rm3192mil-from-ipo-for-business-expansion"}
+  },
+  "todo_official": "待补：招股书（业务细节、客户、财务数据）。目前资料只来自一篇新闻，商业模式分析非常有限。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": ["s1"],
+    "summary": "目前公开新闻只说它是“机械工程公司”，连卖什么都没讲清楚。从募资用途看，钱主要流向加埔厂房（包括还 RM10 百万贷款），这点值得投资者先问清楚。",
+    "bmc": {
+      "customer_segments": {"text": "资料不足：新闻未披露客户类型。", "basis": "unknown"},
+      "value_propositions": {"text": "资料不足；计划设立客户体验中心／示范实验室，暗示产品需要现场展示给客户看。", "basis": "inference"},
+      "channels": {"text": "资料不足；客户体验中心可能成为销售渠道之一。", "basis": "inference"},
+      "customer_relationships": {"text": "资料不足。", "basis": "unknown"},
+      "revenue_streams": {"text": "资料不足：新闻未披露收入来源与财务数据。", "basis": "unknown"},
+      "key_resources": {"text": "雪兰莪加埔的厂房物业。", "basis": "fact"},
+      "key_activities": {"text": "机械工程（细节未披露）。", "basis": "fact"},
+      "key_partners": {"text": "资料不足。", "basis": "unknown"},
+      "cost_structure": {"text": "厂房相关支出与融资成本明显；募资中 RM10 百万用于偿还厂房定期融资。", "basis": "fact"}
+    },
+    "moat": "资料不足，无法判断。",
+    "money_flow": "约 83% 募资（RM26.42 百万）用于营运扩张，其中大部分与加埔厂房有关，包括 RM10 百万还债；上市费用 RM5.5 百万（约 17%）。还债本身不创造新收入，但会减轻利息负担。",
+    "watch": ["招股书里的收入、利润、主要客户", "加埔厂房投入运营的时间表", "还债后的负债水平与利息节省", "公众部分超额认购结果（截止 2026-11-26）"],
+    "investor_takeaway": "资料还太少，不建议只凭新闻下判断。先读招股书的业务概况、风险因素和财务资料，再看 RM1.6 亿市值合不合理。",
+    "sme_lessons": ["募资用途写“还债”不一定是坏事，但投资者会问：为什么要靠上市来还？", "能被展示的产品，设个示范中心往往比发传单有效。"],
+    "risks": [
+      {"title": "资讯不足", "detail": "公开新闻未说明业务、客户与财务，本站目前无法做有意义的商业模式分析。", "basis": "fact"},
+      {"title": "募资集中于单一厂房", "detail": "大部分募资与加埔厂房相关，项目延误会影响扩张计划。", "basis": "inference"},
+      {"title": "部分募资用于还债", "detail": "RM10 百万用于偿还定期融资，这部分资金不直接推动增长。", "basis": "fact"}
+    ]
+  }
+}

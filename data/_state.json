@@ -1,0 +1,44 @@
+{
+ "seen": {
+  "https://www.thestar.com.my/business/business-news/2026/10/28/impact-capital-holdings-launches-ipo-prospectus": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://finance.yahoo.com/markets/stocks/articles/impact-capital-holdings-berhads-ipo-173000444.html": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.thestar.com.my/business/business-news/2026/11/12/ioipg-malaysia-reit-fixes-ipo-price-at-91-sen-per-unit": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://rates.my/ipo/ioipg-malaysia-reit": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.sc.com.my/resources/prospectus-exposure/prospectus-exposure-ioipg-malaysia-real-estate-investment-trust": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.thestar.com.my/business/business-news/2026/11/06/emits-aims-to-raise-rm15mil-from-ipo-ahead-of-ace-market-listing": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.thestar.com.my/business/business-news/2026/11/18/sca-solutions-expects-to-raise-rm3192mil-from-ipo-for-business-expansion": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.thestar.com.my/business/business-news/2026/10/26/ace-market-bound-mydcd-aims-to-raise-rm1876mil-from-ipo": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.thestar.com.my/business/business-news/2026/11/04/mydcd-ipo-oversubscribed-by-3646-times": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  },
+  "https://www.businesstoday.com.my/2026/11/17/mydcd-opens-14-29-below-ipo-price-in-ace-market-debut/": {
+   "status": "seeded",
+   "checked": "2026-11-20"
+  }
+ }
+}

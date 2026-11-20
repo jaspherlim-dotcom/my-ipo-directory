@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="hero">
+  <p class="eyebrow">Bursa Malaysia · 中文 IPO 资料库</p>
+  <h1>看懂每一个马股 IPO：<br>它靠什么赚钱，钱拿去做什么。</h1>
+  <p class="lede">{{ cfg.site_tagline }}。资料每天自动更新，优先采用 Bursa 公告、证监会（SC）文件和招股书。</p>
+  <div class="stats">
+    <div><b>{{ counts.open }}</b><span>认购中</span></div>
+    <div><b>{{ counts.upcoming }}</b><span>即将上市</span></div>
+    <div><b>{{ counts.listed }}</b><span>近期已上市</span></div>
+  </div>
+</section>
+
+<section class="filters" aria-label="筛选">
+  <div class="chips" data-filter="status">
+    <button class="chip on" data-v="all">全部</button>
+    <button class="chip" data-v="open">认购中</button>
+    <button class="chip" data-v="upcoming">即将上市</button>
+    <button class="chip" data-v="listed">已上市</button>
+  </div>
+  <div class="chips" data-filter="market">
+    <button class="chip on" data-v="all">所有市场</button>
+    <button class="chip" data-v="Main">主板</button>
+    <button class="chip" data-v="ACE">ACE</button>
+    <button class="chip" data-v="LEAP">LEAP</button>
+  </div>
+  <input class="search" type="search" placeholder="搜索公司或行业…" aria-label="搜索">
+</section>
+
+<section class="cards">
+{% for r in recs %}
+  <a class="card" href="ipo/{{ r.slug }}.html" data-status="{{ r.status }}" data-market="{{ fv(r,'market') }}" data-q="{{ r.name|lower }} {{ r.name_zh|lower }} {{ r.sector_zh }}">
+    <div class="card-top">
+      <span class="status status-{{ r.status }}">{{ r.status_zh }}</span>
+      <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>
+    </div>
+    <h2>{{ r.name_zh }}</h2>
+    <p class="sub">{{ r.name }}</p>
+    <p class="sector">{{ r.sector_zh }}</p>
+    <p class="liner">{{ r.one_liner }}</p>
+    <dl class="mini">
+      <div><dt>发行价</dt><dd>{{ fmt_fact('issue_price_rm', fv(r,'issue_price_rm')) }}</dd></div>
+      <div><dt>IPO 市值</dt><dd>{{ fmt_fact('market_cap_rm', fv(r,'market_cap_rm')) }}</dd></div>
+      <div><dt>超额认购</dt><dd>{{ fmt_fact('oversub_public', fv(r,'oversub_public')) }}</dd></div>
+      <div><dt>上市日期</dt><dd>{{ fmt_fact('listing_date', fv(r,'listing_date')) }}</dd></div>
+    </dl>
+    {% if r.first_day_pct is not none %}<p class="perf {{ 'up' if r.first_day_pct >= 0 else 'down' }}">首日开盘 {{ '%+.2f'|format(r.first_day_pct) }}%</p>{% endif %}
+    <p class="card-foot">{{ r.sources|length }} 个来源{% if not r.has_official %} · <span class="warn">待补官方文件</span>{% endif %}</p>
+  </a>
+{% endfor %}
+</section>
+<p class="empty" hidden>没有符合条件的 IPO。</p>
+{% endblock %}

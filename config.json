@@ -1,0 +1,10 @@
+{
+  "site_title": "马股 IPO 观察站",
+  "site_tagline": "每一个数字都附来源，每一个解读都标明是 AI 写的",
+  "base_url": "",
+  "source_kinds": {
+    "official": ["bursamalaysia.com", "sc.com.my", "bnm.gov.my"],
+    "news": ["thestar.com.my", "theedgemalaysia.com", "nst.com.my", "bernama.com", "thesun.my", "businesstoday.com.my", "malaymail.com", "freemalaysiatoday.com", "sinchew.com.my", "chinapress.com.my", "orientaldaily.com.my"],
+    "aggregator": ["rates.my", "isaham.my", "klsescreener.com", "malaysiastock.biz", "minichart.com.sg"]
+  }
+}
