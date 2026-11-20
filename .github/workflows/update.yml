@@ -2,7 +2,8 @@ name: 每日更新 IPO 资料并发布网站
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # 每天早上 9:00（马来西亚时间）
+    - cron: "0 1 * * *"   # 每天早上 9:00（马来西亚时间）：全面更新
+    - cron: "20 * * * *"  # 每小时：只看后台有没有新上传的招股书
   workflow_dispatch: {}     # 也可以在 GitHub 上手动按“Run workflow”
   push:
     branches: [main]
@@ -19,6 +20,8 @@ concurrency:
 jobs:
   update-and-build:
     runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.save.outputs.deploy }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,36 +29,58 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
 
-      - name: 抓取并更新资料
+      - name: 处理后台上传的招股书
         if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/pull_prospectus.py
+
+      - name: 抓取并更新资料
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/update.py
 
       - name: 把新资料存回仓库
-        if: github.event_name != 'push'
+        id: save
         run: |
-          git config user.name "ipo-bot"
-          git config user.email "ipo-bot@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "自动更新 IPO 资料 $(date -u +%F)"
-          git push
+          changed=false
+          if [ "${{ github.event_name }}" != "push" ]; then
+            git config user.name "ipo-bot"
+            git config user.email "ipo-bot@users.noreply.github.com"
+            git add data/
+            if ! git diff --cached --quiet; then
+              git commit -m "自动更新 IPO 资料 $(date -u +%F)"
+              git push
+              changed=true
+            fi
+          fi
+          # 每小时那一轮：没有新资料就不重新发布
+          if [ "$changed" = true ] || [ "${{ github.event.schedule }}" != "20 * * * *" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: 生成网站
+        if: steps.save.outputs.deploy == 'true'
         run: python scripts/build.py
 
       - name: 上传会员内容到 Supabase
+        if: steps.save.outputs.deploy == 'true'
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python scripts/publish_premium.py
 
       - uses: actions/upload-pages-artifact@v3
+        if: steps.save.outputs.deploy == 'true'
         with:
           path: dist
 
   deploy:
     needs: update-and-build
+    if: needs.update-and-build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

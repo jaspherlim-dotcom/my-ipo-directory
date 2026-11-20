@@ -63,3 +63,48 @@ $$;
 drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
+
+-- ============ 后台：上传招股书（只有管理员能用） ============
+-- 3. 管理员名单。把自己加进去（电邮换成你的登入电邮，先在网站登入过一次）：
+--    insert into public.admins (user_id) select id from auth.users where email = '你的电邮';
+create table if not exists public.admins (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  created_at timestamptz not null default now()
+);
+alter table public.admins enable row level security;  -- 不开放任何读写，只能在 SQL Editor 改
+
+create or replace function public.is_admin() returns boolean
+language sql stable security definer set search_path = public as $$
+  select auth.uid() is not null and exists (select 1 from public.admins a where a.user_id = auth.uid());
+$$;
+
+-- 4. 上传纪录：后台每上传一份就加一行，GitHub Actions 处理完把 status 改成 done / failed
+create table if not exists public.prospectus_uploads (
+  id bigint generated always as identity primary key,
+  path text not null,                 -- Storage 里的位置
+  file_name text,
+  bursa_url text,
+  slug text,                          -- 留空 = 让程序按公司名自动判断
+  status text not null default 'pending',   -- pending / done / failed
+  message text,
+  uploaded_by uuid default auth.uid(),
+  created_at timestamptz not null default now(),
+  processed_at timestamptz
+);
+alter table public.prospectus_uploads enable row level security;
+drop policy if exists "admins read uploads" on public.prospectus_uploads;
+create policy "admins read uploads" on public.prospectus_uploads for select using (public.is_admin());
+drop policy if exists "admins add uploads" on public.prospectus_uploads;
+create policy "admins add uploads" on public.prospectus_uploads for insert
+  with check (public.is_admin() and status = 'pending');
+
+-- 5. 私人文件夹（不公开），只收 PDF，单个最大 50MB
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('prospectus', 'prospectus', false, 52428800, array['application/pdf'])
+on conflict (id) do nothing;
+drop policy if exists "admins upload prospectus" on storage.objects;
+create policy "admins upload prospectus" on storage.objects for insert
+  with check (bucket_id = 'prospectus' and public.is_admin());
+drop policy if exists "admins read prospectus" on storage.objects;
+create policy "admins read prospectus" on storage.objects for select
+  using (bucket_id = 'prospectus' and public.is_admin());

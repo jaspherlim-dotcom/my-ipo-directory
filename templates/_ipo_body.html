@@ -78,6 +78,16 @@
 </section>
 {% endif %}
 
+{% if r.prospectus_risks %}
+<section class="block">
+  <h2>招股书列出的风险</h2>
+  <p class="fn">摘自招股书“风险因素”章节，用白话整理；页码可对照原文。</p>
+  <div class="risks">
+    {% for k in r.prospectus_risks %}<div class="risk"><div class="bmc-h"><b>{{ k.title }}</b><span class="pg">第{{ k.page }}页</span></div><p>{{ k.detail }}</p></div>{% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% for q in r.quotes or [] %}
 <blockquote class="quote">“{{ q.text }}”<cite>— {{ q.who }} <a class="ref" href="#src-{{ q.src }}">[{{ r.src_index[q.src] }}]</a></cite></blockquote>
 {% endfor %}

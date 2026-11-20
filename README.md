@@ -69,3 +69,23 @@ cd dist && python -m http.server 8000   # 打开 http://localhost:8000
 1. Stripe 建两个订阅价格（月费、年费），各开一个 Payment Link，填进 `payment_link_monthly / yearly`。
 2. 部署 webhook：`supabase functions deploy stripe-webhook --no-verify-jwt`，设 secrets `STRIPE_SECRET_KEY`、`STRIPE_WEBHOOK_SECRET`；在 Stripe 把 webhook 指向该函数网址，事件选 `checkout.session.completed`、`customer.subscription.updated`、`customer.subscription.deleted`。
 3. Supabase 执行：`update public.site_settings set value = 'true' where key = 'require_payment';`，并把 `config.json` 的 `require_payment` 改成 `true`。
+
+## 上传招股书（后台）
+
+网站有一个只有你能进的后台：`你的网址/admin.html`（不在导航栏，搜索引擎也不收录）。
+
+1. 先在网站用你的电邮登入一次。
+2. Supabase SQL Editor 执行（电邮换成你的）：
+   `insert into public.admins (user_id) select id from auth.users where email = '你的电邮';`
+3. 以后打开 `admin.html` → 选招股书 PDF →（选填）贴 Bursa 链接、选对应公司 → 上传。
+4. GitHub Actions 每小时检查一次，有新 PDF 就处理，后台表格会显示“完成 / 失败”和收录了几项。
+
+程序做什么：
+- 读 PDF 文字（扫描图片版读不到，会标失败）。
+- AI 抽取发行价、股数、募资用途、重要日期、顾问、Shariah、MITI、PE、财务数字、风险因素。
+- **每个数字都要有页码 + 原文引句**，程序回到那一页核对，对不上就丢掉。
+- 招股书数字优先于新闻；旧数字写进备注，不会悄悄消失。
+- 重写 9 宫格（标记 `reviewed: true` 的不动）。
+- PDF 只在处理时下载到临时文件夹，处理完即删，不放进仓库、不放上网站。
+
+本地也可以直接跑：`python scripts/ingest_prospectus.py 招股书.pdf --url <Bursa链接>`

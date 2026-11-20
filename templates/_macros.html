@@ -2,6 +2,7 @@
 {%- for sid in fact.src -%}
 <a class="ref" href="{{ depth_href }}#src-{{ sid }}" title="{{ r.sources[sid].publisher }}：{{ r.sources[sid].title }}">[{{ r.src_index[sid] }}]</a>
 {%- endfor -%}
+{%- if fact.page %}<span class="pg" title="{{ fact.evidence or '' }}">第{{ fact.page }}页</span>{% endif -%}
 {%- if fact.auto %}<span class="tag tag-auto" title="自动抽取，引句已核对，未经人工审核">自动</span>{% endif -%}
 {%- endmacro %}
 

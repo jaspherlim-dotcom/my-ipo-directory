@@ -138,6 +138,7 @@ def main() -> None:
     (DIST / "about.html").write_text(env.get_template("about.html").render(changelog=changelog, depth=""), encoding="utf-8")
     for name in ("login", "account", "membership"):
         (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html").render(depth=""), encoding="utf-8")
+    (DIST / "admin.html").write_text(env.get_template("admin.html").render(records=sorted(recs, key=lambda r: r["name"]), depth=""), encoding="utf-8")
     PREMIUM = ROOT / "premium_out"
     if PREMIUM.exists():
         shutil.rmtree(PREMIUM)

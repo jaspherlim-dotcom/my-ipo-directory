@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ depth }}static/style.css">
+{% block head %}{% endblock %}
 </head>
 <body>
 <header class="topbar">
@@ -35,5 +36,6 @@
 {% if cfg.membership.supabase_url %}<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>{% endif %}
 <script src="{{ depth }}static/app.js"></script>
 <script src="{{ depth }}static/member.js"></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>
