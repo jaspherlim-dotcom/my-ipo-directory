@@ -102,9 +102,10 @@ a { color: var(--accent); }
 .layer-label small { font-weight: 400; color: var(--ink-2); font-size: 13px; }
 .ai-label { border-color: var(--ai-ink); color: var(--ai-ink); margin-top: 0; }
 
-.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .fact { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
 .fact.wide { grid-column: 1 / -1; }
+.fact { min-width: 0; overflow-wrap: anywhere; }
 .fk { font-size: 13px; color: var(--ink-2); }
 .fvv { font-weight: 700; font-size: 18px; }
 .fact.wide .fvv { font-size: 15px; font-weight: 500; }
