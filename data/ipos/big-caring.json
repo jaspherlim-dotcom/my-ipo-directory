@@ -1,0 +1,243 @@
+{
+  "slug": "big-caring",
+  "name": "Big Caring Group Bhd",
+  "name_zh": "Big Caring（大众关怀药房）",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "Main",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "business": {
+      "v": "马来西亚零售药房连锁，2006 年由一间店起家，现已超过 600 间门店，遍布全国 13 州；经营医疗保健、药品及保健品；计划未来 3 至 5 年每年开 40 至 50 间新店，并考虑收购及建新配送中心。现有 Bukit Raja 配送中心使用率 80.2%（截至 2026 年 9 月 30 日）。",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 1.08,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "The Star 写为“最高 IPO 价”"
+    },
+    "new_shares": {
+      "v": 590500000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "占扩大后股本 8%"
+    },
+    "ofs_shares": {
+      "v": 1300000000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "占扩大后股本 17.5%"
+    },
+    "proceeds_rm": {
+      "v": 637800000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "公开发售新股所得（毛额）"
+    },
+    "market_cap_rm": {
+      "v": 8000000000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "约 RM80 亿"
+    },
+    "enlarged_shares": {
+      "v": 7400000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "prospectus_date": {
+      "v": "2026-10-29",
+      "src": [
+        "s2"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-11-19",
+      "src": [
+        "s1"
+      ]
+    },
+    "oversub_public": {
+      "v": 4.31,
+      "src": [
+        "s3"
+      ],
+      "note": "土著部分约 0.94 倍（认购不足），其他马来西亚公众部分约 7.68 倍"
+    },
+    "applications": {
+      "v": 29474,
+      "src": [
+        "s3"
+      ]
+    },
+    "adviser": {
+      "v": "Maybank IB、RHB IB、AmInvestment Bank（联合主要顾问）；UBS（联合全球协调人）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "偿还银行借款",
+      "rm": 570831000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "原文只给 89.5%，金额由本站按 RM637.8 百万计算"
+    },
+    {
+      "item": "设立新配送中心（36 个月内）",
+      "rm": 29976600,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "原文只给 4.7%，金额由本站按 RM637.8 百万计算"
+    },
+    {
+      "item": "上市费用",
+      "rm": 36992400,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "原文只给 5.8%，金额由本站按 RM637.8 百万计算"
+    }
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {
+      "title": "Big Caring plans to raise RM637.8mil from Main Market IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-10-29",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+      "accessed": "2026-11-20"
+    },
+    "s2": {
+      "title": "Big Caring Group plans 40 to 50 new outlets annually over next three to five years",
+      "publisher": "The Sun",
+      "kind": "news",
+      "date": "2026-10-29",
+      "url": "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/",
+      "accessed": "2026-11-20"
+    },
+    "s3": {
+      "title": "Public portion of Big Caring IPO 4.31 times oversubscribed",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-11-10",
+      "url": "https://www.thestar.com.my/business/business-news/2026/11/10/public-portion-of-big-caring-ipo-431-times-oversubscribed",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：最终发行价、首日表现、招股书财务数据。中文名为本站暂译。",
+  "quotes": [
+    {
+      "who": "Livia Chan，董事",
+      "text": "Same-store sales growth remained healthy at high single digits",
+      "src": "s2"
+    }
+  ],
+  "sector_zh": "零售 · 连锁药房",
+  "one_liner": "全国 600 多间门店的连锁药房，靠卖药品、保健品和个人护理产品赚钱。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "Big Caring 是今年最大的零售 IPO 之一：600 多间药房，市值约 RM80 亿。但要看清楚，公司拿到的钱近九成是拿去还银行，不是开新店。",
+    "bmc": {
+      "customer_segments": {
+        "text": "全国各地的一般消费者、病患与保健品买家。",
+        "basis": "inference"
+      },
+      "value_propositions": {
+        "text": "社区里随处可见、价格有竞争力、有药剂师咨询的一站式健康商店。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "600 多间实体门店，覆盖 13 州。",
+        "basis": "fact"
+      },
+      "customer_relationships": {
+        "text": "会员制度与药剂师服务（新闻未详述）；同店销售增长维持高单位数。",
+        "basis": "fact"
+      },
+      "revenue_streams": {
+        "text": "药品、保健品、个人护理产品零售。",
+        "basis": "fact"
+      },
+      "key_resources": {
+        "text": "门店网络、Bukit Raja 配送中心（使用率 80.2%）。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "采购、物流配送、开店与门店营运。",
+        "basis": "fact"
+      },
+      "key_partners": {
+        "text": "药厂与品牌供应商、物业业主。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "货品成本、店租、人事、物流；还债后利息成本会下降。",
+        "basis": "inference"
+      }
+    },
+    "moat": "护城河在于门店密度与采购规模：店越多，向药厂拿货越便宜，物流越有效率。",
+    "money_flow": "约 89.5% 的新股所得用来还银行借款，所以这次 IPO 更像“降负债 + 让老股东套现部分股份”，增长资金主要靠内部现金流。",
+    "watch": [
+      "每年新开 40-50 间店的进度",
+      "同店销售增长",
+      "还债后的利息节省与净利率",
+      "与 Watsons、Guardian、其他连锁药房的竞争"
+    ],
+    "investor_takeaway": "大型、业务易懂的消费股，但土著部分认购不足、公众部分只超额认购 4.31 倍，反映市场对 RM80 亿估值有保留。",
+    "sme_lessons": [
+      "连锁的威力在于规模经济：采购、物流、品牌一起放大。",
+      "同店销售增长比开新店更能说明生意是否健康。"
+    ],
+    "risks": [
+      {
+        "title": "估值",
+        "detail": "以 RM1.08 计市值约 RM80 亿，需对照盈利判断是否偏贵。",
+        "basis": "inference"
+      },
+      {
+        "title": "竞争",
+        "detail": "连锁药房与个人护理零售竞争激烈。",
+        "basis": "inference"
+      },
+      {
+        "title": "募资主要用于还债",
+        "detail": "增长主要靠内部现金流，不是新资金。",
+        "basis": "fact"
+      }
+    ]
+  }
+}

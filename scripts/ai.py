@@ -75,7 +75,8 @@ class Fact(BaseModel):
         "market", "business", "issue_price_rm", "new_shares", "ofs_shares", "proceeds_rm",
         "market_cap_rm", "enlarged_shares", "prospectus_date", "app_open", "app_close",
         "ballot_date", "listing_date", "oversub_public", "applications", "first_day_open_rm",
-        "first_day_close_rm", "adviser", "yield_pct", "stock_code",
+        "first_day_close_rm", "adviser", "yield_pct", "stock_code", "shariah", "issuing_house",
+        "miti_allocation", "pe_ratio",
     ]
     value: str = Field(description="数值用纯数字（RM 换算成令吉整数，例如 RM31.92mil -> 31920000；倍数 36.46；日期 YYYY-MM-DD）；文字用简体中文")
     evidence: str = Field(description="从原文逐字复制的一小段英文/马来文原句（10-200 字符），必须能在原文中找到")

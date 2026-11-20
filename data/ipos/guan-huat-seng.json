@@ -1,0 +1,224 @@
+{
+  "slug": "guan-huat-seng",
+  "name": "Guan Huat Seng Holdings Bhd",
+  "name_zh": "GHS（源发成）",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1"
+      ]
+    },
+    "business": {
+      "v": "马六甲食品制造商，业务属于马来西亚食品与饮料分销贸易行业；计划扩大产品种类、加强与现有客户的关系，并开拓国内外新市场。",
+      "src": [
+        "s1"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.25,
+      "src": [
+        "s1"
+      ]
+    },
+    "new_shares": {
+      "v": 120000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "ofs_shares": {
+      "v": 21000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 30000000,
+      "src": [
+        "s1"
+      ],
+      "note": "公开发售新股所得"
+    },
+    "market_cap_rm": {
+      "v": 118380000,
+      "src": [
+        "s1"
+      ]
+    },
+    "enlarged_shares": {
+      "v": 473500000,
+      "src": [
+        "s1"
+      ]
+    },
+    "prospectus_date": {
+      "v": "2026-01-05",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_open": {
+      "v": "2026-01-05",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_close": {
+      "v": "2026-01-09",
+      "src": [
+        "s1"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-01-22",
+      "src": [
+        "s1"
+      ],
+      "note": "文章发布时为预定上市日"
+    },
+    "adviser": {
+      "v": "TA Securities Holdings Bhd（主要顾问、保荐人、包销商及配售代理）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "马六甲 Batu Berendam 新综合厂区（部分）",
+      "rm": 12000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "Krubong 新设施（部分）",
+      "rm": 9000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "营运资金",
+      "rm": 3000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "营销费用",
+      "rm": 1500000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 4500000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {
+      "title": "ACE Market-bound GHS Holdings to raise RM30mil from IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-01-05",
+      "url": "https://www.thestar.com.my/business/business-news/2026/01/05/ace-market-bound-ghs-holdings-to-raise-rm30mil-from-ipo",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。中文名“源发成”为本站音译，未经公司确认。",
+  "quotes": [
+    {
+      "who": "Yeo Tien Ee，董事经理",
+      "text": "Our growth strategy is grounded in discipline, practicality, and a clear understanding of our strengths",
+      "src": "s1"
+    }
+  ],
+  "sector_zh": "消费 · 食品制造",
+  "one_liner": "马六甲的食品制造商，产品在本地分销贸易渠道销售。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "GHS 是马六甲的食品厂，钱大部分拿去盖新厂。食品业门槛不高，但做得久、有渠道，就是一门稳生意。",
+    "bmc": {
+      "customer_segments": {
+        "text": "经销商、零售商与贸易渠道（新闻提及分销贸易行业）。",
+        "basis": "inference"
+      },
+      "value_propositions": {
+        "text": "稳定供货与产品种类，具体卖点新闻未说明。",
+        "basis": "unknown"
+      },
+      "channels": {
+        "text": "通过分销贸易渠道铺货。",
+        "basis": "fact"
+      },
+      "customer_relationships": {
+        "text": "与现有客户长期合作，并计划加强关系。",
+        "basis": "fact"
+      },
+      "revenue_streams": {
+        "text": "食品销售收入；产品与数字未披露。",
+        "basis": "inference"
+      },
+      "key_resources": {
+        "text": "马六甲厂房，新建 Batu Berendam 与 Krubong 设施。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "食品生产、包装、分销。",
+        "basis": "inference"
+      },
+      "key_partners": {
+        "text": "经销商、原料供应商。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "原料、人工、厂房折旧；募资 RM1.5 百万做营销。",
+        "basis": "inference"
+      }
+    },
+    "moat": "食品制造护城河通常来自品牌与渠道；新闻资料不足以判断 GHS 的品牌力。",
+    "money_flow": "RM21 百万（70%）投入两个新厂区，属于产能扩张型 IPO。",
+    "watch": [
+      "新厂投产时间与产能利用率",
+      "出口市场进展",
+      "原料成本",
+      "毛利率"
+    ],
+    "investor_takeaway": "以 IPO 价算市值约 RM1.18 亿；没有盈利数字前难以判断估值，要读招股书。",
+    "sme_lessons": [
+      "家族食品厂上市，最大的转变是要习惯公开交代每一季成绩。",
+      "扩产前先想清楚渠道能不能消化新产能。"
+    ],
+    "risks": [
+      {
+        "title": "产能扩张风险",
+        "detail": "新厂若需求跟不上，折旧会拖累盈利。",
+        "basis": "inference"
+      },
+      {
+        "title": "原料价格",
+        "detail": "面粉、食油、糖等原料价格波动。",
+        "basis": "inference"
+      },
+      {
+        "title": "财务资料尚未收录",
+        "detail": "本站未有收入与利润资料。",
+        "basis": "unknown"
+      }
+    ]
+  }
+}

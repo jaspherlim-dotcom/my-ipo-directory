@@ -1,0 +1,236 @@
+{
+  "slug": "ecosys",
+  "name": "EcoSys (Malaysia) Bhd",
+  "name_zh": "EcoSys",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "business": {
+      "v": "工业解决方案供应商，为半导体及相关行业制造超高纯度（UHP）精密工程部件与子组件，以及废气处理系统（abatement systems）；印度市场在 FY2025 占集团收入 35.1%，印度废气处理业务新增 7 名客户，并计划在印度设销售与服务中心。",
+      "src": [
+        "s1"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.27,
+      "src": [
+        "s1",
+        "s3"
+      ]
+    },
+    "new_shares": {
+      "v": 145700000,
+      "src": [
+        "s1"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 39340000,
+      "src": [
+        "s1"
+      ],
+      "note": "全部为新股，没有献售旧股"
+    },
+    "listing_date": {
+      "v": "2026-10-14",
+      "src": [
+        "s2",
+        "s3"
+      ]
+    },
+    "oversub_public": {
+      "v": 206.7,
+      "src": [
+        "s2"
+      ],
+      "note": "土著部分 136.77 倍，其他公众部分 276.63 倍"
+    },
+    "applications": {
+      "v": 31734,
+      "src": [
+        "s2"
+      ]
+    },
+    "adviser": {
+      "v": "M&A Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）；Eco Asia Capital Advisory（财务顾问）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "扩展废气处理业务（采购关键组件与模块）",
+      "rm": 17000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "偿还银行借款",
+      "rm": 8000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "购买机器、增聘员工",
+      "rm": 4930000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "扩展印度业务",
+      "rm": 1540000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "营运资金",
+      "rm": 2360000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 5500000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [
+    {
+      "label": "印度市场收入",
+      "period": "FY2025",
+      "rm": 38220000,
+      "src": [
+        "s1"
+      ],
+      "note": "只是印度部分，占集团收入 35.1%；新闻未给集团总收入"
+    }
+  ],
+  "sources": {
+    "s1": {
+      "title": "EcoSys seeks to raise RM39.34mil from ACE Market IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-09-23",
+      "url": "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo",
+      "accessed": "2026-11-20"
+    },
+    "s2": {
+      "title": "EcoSys Malaysia IPO public portion oversubscribed 206.7 times",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-10-01",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times",
+      "accessed": "2026-11-20"
+    },
+    "s3": {
+      "title": "Ecosys shares soar 179% in ACE Market debut",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-10-14",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/14/ecosys-shares-soar-179-in-morning-trade",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。",
+  "quotes": [
+    {
+      "who": "Chan Chee Wei，董事经理",
+      "text": "We believe these initiatives will enhance our ability to serve customers",
+      "src": "s1"
+    }
+  ],
+  "sector_zh": "科技 · 半导体设备与废气处理",
+  "one_liner": "为半导体业制造超高纯度精密部件和废气处理系统，印度是重要市场。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "芯片厂会排出有毒废气，一定要处理才能排放。EcoSys 一边做这类废气处理系统，一边做超高纯度零件，等于站在半导体扩厂潮的“必需品”位置，而且三分之一收入来自正在大建芯片厂的印度。",
+    "bmc": {
+      "customer_segments": {
+        "text": "半导体及相关行业的工厂，包括印度客户。",
+        "basis": "fact"
+      },
+      "value_propositions": {
+        "text": "超高纯度部件与废气处理，帮芯片厂符合环保与制程要求。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "直接销售，计划在印度设销售与服务中心。",
+        "basis": "fact"
+      },
+      "customer_relationships": {
+        "text": "设备装好后需要维护服务，形成长期关系。",
+        "basis": "inference"
+      },
+      "revenue_streams": {
+        "text": "部件制造 + 废气处理系统销售；印度 FY2025 收入 RM38.22 百万。",
+        "basis": "fact"
+      },
+      "key_resources": {
+        "text": "超高纯度制造能力、废气处理技术、印度客户群。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "精密制造、系统组装、安装与服务。",
+        "basis": "inference"
+      },
+      "key_partners": {
+        "text": "半导体设备商与芯片厂。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "关键组件采购、机器、人员；募资 RM17 百万用于采购组件扩展废气处理业务。",
+        "basis": "fact"
+      }
+    },
+    "moat": "超高纯度与废气处理有技术门槛和客户认证，比一般机械加工更难被取代。",
+    "money_flow": "最大一笔 RM17 百万投入废气处理业务，RM8 百万还债，RM1.54 百万开拓印度。",
+    "watch": [
+      "印度客户与订单增长",
+      "半导体资本开支周期",
+      "首日暴涨后的估值是否透支",
+      "毛利率"
+    ],
+    "investor_takeaway": "公众超额认购 206.7 倍，首日早盘一度大涨（据 The Star 标题为 179%），短期情绪非常热。追高前要冷静对照盈利与估值。",
+    "sme_lessons": [
+      "在热门产业里找“必需又没人想做”的环节，比如废气处理。",
+      "海外市场占比高时，要在当地设服务点，才能守住客户。"
+    ],
+    "risks": [
+      {
+        "title": "估值透支",
+        "detail": "首日大涨后股价可能已反映多年增长。",
+        "basis": "inference"
+      },
+      {
+        "title": "半导体周期",
+        "detail": "芯片业资本开支放缓会直接影响订单。",
+        "basis": "inference"
+      },
+      {
+        "title": "印度市场集中",
+        "detail": "印度占收入 35.1%，当地政策或项目延误影响大。",
+        "basis": "fact"
+      }
+    ]
+  }
+}

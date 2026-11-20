@@ -33,6 +33,7 @@
     <div class="card-top">
       <span class="status status-{{ r.status }}">{{ r.status_zh }}</span>
       <span class="mkt">{{ MARKET_ZH.get(fv(r,'market'), fv(r,'market')) }}</span>
+      {% if fv(r,'shariah') %}<span class="mkt">伊斯兰合规</span>{% endif %}
     </div>
     <h2>{{ r.name_zh }}</h2>
     <p class="sub">{{ r.name }}</p>

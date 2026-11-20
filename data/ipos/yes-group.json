@@ -1,0 +1,224 @@
+{
+  "slug": "yes-group",
+  "name": "Yes Group Management Bhd",
+  "name_zh": "Yes Group（Yes Travel）",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "business": {
+      "v": "经营 Yes Travel 品牌，为企业客户提供 MICE（会议、奖励旅游、大会及展览）旅游与活动管理服务；计划扩展欧洲地面交通服务、在英国设区域办事处服务英国和德国等西欧客户，并设立 Yes Academy（目标每年 100 名学员）。",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.18,
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "new_shares": {
+      "v": 91870000,
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "ofs_shares": {
+      "v": 45930000,
+      "src": [
+        "s2"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 16540000,
+      "src": [
+        "s1",
+        "s2"
+      ],
+      "note": "公开发售新股所得"
+    },
+    "app_close": {
+      "v": "2026-11-13",
+      "src": [
+        "s1"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-11-26",
+      "src": [
+        "s1",
+        "s2"
+      ]
+    },
+    "oversub_public": {
+      "v": 2.8,
+      "src": [
+        "s2"
+      ],
+      "note": "⚠ 原文写 “subscribed 2.80 times”（认购倍数），口径可能与超额认购不同；土著部分 0.49 倍、其他公众部分 5.11 倍"
+    },
+    "applications": {
+      "v": 2053,
+      "src": [
+        "s2"
+      ]
+    },
+    "adviser": {
+      "v": "Malacca Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）",
+      "src": [
+        "s2"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "扩展欧洲地面交通服务、设英国办事处",
+      "rm": 6500000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "设立 Yes Academy",
+      "rm": 3000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "一般营运资金",
+      "rm": 3040000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 4000000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {
+      "title": "YES Group aims to raise RM16.54mil from its IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-11-05",
+      "url": "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+      "accessed": "2026-11-20"
+    },
+    "s2": {
+      "title": "Yes Group IPO public portion subscribed 2.80 times ahead of ACE Market debut",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-11-17",
+      "url": "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。",
+  "quotes": [
+    {
+      "who": "Mak Shau Kwan，董事经理",
+      "text": "Having our own operations in the United Kingdom will improve cost efficiency",
+      "src": "s1"
+    }
+  ],
+  "sector_zh": "服务 · 商务奖励旅游（MICE）",
+  "one_liner": "帮企业安排奖励旅游、会议和展览行程的 MICE 旅游公司。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "公司奖励业绩好的员工去欧洲玩，背后要有人订机票、安排车、包场地，Yes Group 就是做这个的。它现在想在英国自己设点，把外包给当地的钱赚回来。",
+    "bmc": {
+      "customer_segments": {
+        "text": "企业客户（奖励旅游、会议、展览的主办方）。",
+        "basis": "fact"
+      },
+      "value_propositions": {
+        "text": "一站式安排团体行程与活动，客户只要讲预算和目的地。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "直接对企业销售。",
+        "basis": "inference"
+      },
+      "customer_relationships": {
+        "text": "回头客为主，企业每年都有奖励旅游与年会。",
+        "basis": "inference"
+      },
+      "revenue_streams": {
+        "text": "MICE 项目收费（行程、交通、活动管理）。",
+        "basis": "fact"
+      },
+      "key_resources": {
+        "text": "供应商网络、团队执行经验、即将设立的英国办事处。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "行程设计、供应商采购、现场执行。",
+        "basis": "inference"
+      },
+      "key_partners": {
+        "text": "航空公司、酒店、欧洲地面交通业者。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "机票、酒店、交通等外购成本占大头，利润率取决于议价能力。",
+        "basis": "inference"
+      }
+    },
+    "moat": "护城河在于企业客户关系与执行口碑；在欧洲自营地面交通，有机会把外包利润留在自己手上。",
+    "money_flow": "RM6.5 百万押注欧洲（英国办事处 + 地面交通），上市费用 RM4 百万约占募资 24%。",
+    "watch": [
+      "欧洲业务的利润贡献",
+      "企业客户的回头率",
+      "旅游需求与经济周期",
+      "汇率（英镑、欧元）"
+    ],
+    "investor_takeaway": "很小的 IPO（18 仙），公众认购偏冷、土著部分认购不足。旅游业受经济周期影响大，企业一削预算，奖励旅游往往第一个被砍。",
+    "sme_lessons": [
+      "把外包环节自己做（像在英国自设交通），是提高毛利的方法，但也增加固定成本。",
+      "服务业上市可以“卖培训”：Yes Academy 把经验变成另一条收入线。"
+    ],
+    "risks": [
+      {
+        "title": "经济周期",
+        "detail": "企业削减开支时，奖励旅游预算首当其冲。",
+        "basis": "inference"
+      },
+      {
+        "title": "海外扩张执行",
+        "detail": "在英国设点涉及人事、法规与成本控制。",
+        "basis": "inference"
+      },
+      {
+        "title": "认购偏冷",
+        "detail": "土著部分只认购 0.49 倍。",
+        "basis": "fact"
+      },
+      {
+        "title": "财务资料尚未收录",
+        "detail": "本站未有收入与利润资料。",
+        "basis": "unknown"
+      }
+    ]
+  }
+}

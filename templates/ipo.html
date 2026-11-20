@@ -43,7 +43,7 @@
 {% if r.facts.business %}
 <section class="block">
   <h2>它做什么生意</h2>
-  <p>{{ r.facts.business.v }}{{ refs(r, r.facts.business) }}</p>
+  <p>{{ r.facts.business.v }}{{ refs(r, r.facts.business) }}{% if r.facts.business_extra %} {{ r.facts.business_extra.v }}{{ refs(r, r.facts.business_extra) }}{% endif %}</p>
 </section>
 {% endif %}
 
@@ -66,6 +66,7 @@
     <div class="uop-row">
       <div class="uop-txt"><span>{{ u.item }}</span><b>{{ u.rm_fmt }} <small>{{ u.pct }}%</small>{{ refs(r, u) }}</b></div>
       <div class="bar"><i style="width: {{ u.pct }}%"></i></div>
+      {% if u.note %}<p class="fn">{{ u.note }}</p>{% endif %}
     </div>
     {% endfor %}
   </div>

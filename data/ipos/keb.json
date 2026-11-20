@@ -1,0 +1,233 @@
+{
+  "slug": "keb",
+  "name": "KEB Bhd",
+  "name_zh": "KEB",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1"
+      ]
+    },
+    "business": {
+      "v": "物业发展商，自 2004 年起完成 14 个发展项目，涵盖住宅、工业、商业及综合用途，由内部建筑子公司 KEB Utama（CIDB G7 承包商）负责施工。目前 4 个在建项目总发展价值（GDV）约 RM13.6 亿，另有 2 个未来项目约 RM3.83 亿；土地储备约 60.01 英亩（含合营土地）。",
+      "src": [
+        "s1"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.35,
+      "src": [
+        "s1"
+      ]
+    },
+    "new_shares": {
+      "v": 138540000,
+      "src": [
+        "s1"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 48490000,
+      "src": [
+        "s1"
+      ],
+      "note": "公开发售新股所得"
+    },
+    "prospectus_date": {
+      "v": "2026-10-23",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_open": {
+      "v": "2026-10-23",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_close": {
+      "v": "2026-11-02",
+      "src": [
+        "s1"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-11-16",
+      "src": [
+        "s1"
+      ],
+      "note": "文章发布时为预定上市日"
+    },
+    "adviser": {
+      "v": "M&A Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）；Eco Asia Capital Advisory（财务顾问）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "收购发展用地",
+      "rm": 19000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "项目发展营运资金",
+      "rm": 14890000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "偿还银行借款",
+      "rm": 8500000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 6100000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [
+    {
+      "label": "收入",
+      "period": "2026 年上半年",
+      "rm": 136800000,
+      "src": [
+        "s1"
+      ],
+      "note": "同期毛利 RM45 百万，毛利率 32.89%"
+    },
+    {
+      "label": "净利",
+      "period": "2026 年上半年",
+      "rm": 22790000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "label": "收入",
+      "period": "2026 年第二季",
+      "rm": 54000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "label": "净利",
+      "period": "2026 年第二季",
+      "rm": 6780000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": {
+    "s1": {
+      "title": "KEB to raise RM48.49mil from ACE Market IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-10-23",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/23/keb-to-raise-rm4849mil-from-ace-market-ipo",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。",
+  "quotes": [
+    {
+      "who": "Datuk Lim Kim Chong，董事经理",
+      "text": "The IPO will strengthen our financial position and provide us with additional resources to expand our landbank",
+      "src": "s1"
+    }
+  ],
+  "sector_zh": "房地产 · 物业发展",
+  "one_liner": "建屋兼自己当承包商的物业发展商：自建自卖，赚的是发展利润。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "KEB 是“自己买地、自己建、自己卖”的发展商，自家有 G7 承包商，所以建筑利润也留在家里。募资最大一笔拿去买地，说明它要的是下一批项目。",
+    "bmc": {
+      "customer_segments": {
+        "text": "买房的住户、需要厂房或店面的业者。",
+        "basis": "inference"
+      },
+      "value_propositions": {
+        "text": "一条龙开发：从土地、建筑到销售，中间少一层承包商利润，成本较可控。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "项目现场销售、代理与网络营销；新闻未说明。",
+        "basis": "unknown"
+      },
+      "customer_relationships": {
+        "text": "一次性买卖，口碑影响下一个项目的销售。",
+        "basis": "inference"
+      },
+      "revenue_streams": {
+        "text": "卖房、厂房和商业单位的发展收入；2026 上半年收入 RM136.8 百万。",
+        "basis": "fact"
+      },
+      "key_resources": {
+        "text": "约 60 英亩土地储备、G7 建筑子公司、22 年开发经验。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "购地、规划审批、施工、销售。",
+        "basis": "fact"
+      },
+      "key_partners": {
+        "text": "合营土地的地主、银行（贷款）、分包商。",
+        "basis": "fact"
+      },
+      "cost_structure": {
+        "text": "土地成本、建材与人工、融资利息；上半年毛利率 32.89%。",
+        "basis": "fact"
+      }
+    },
+    "moat": "护城河在于自有施工能力和土地储备，但物业发展高度依赖地点与周期，护城河有限。",
+    "money_flow": "约 39% 募资（RM19 百万）用于买地，另有 RM8.5 百万还银行贷款，属于“补地 + 降负债”。",
+    "watch": [
+      "未入账销售（unbilled sales）与新推案的销售率",
+      "土地储备能撑几年",
+      "负债比率",
+      "利率与房市周期"
+    ],
+    "investor_takeaway": "上半年净利 RM22.79 百万，但物业发展盈利常随项目进度起伏，单看半年数字容易高估。要看未来几年的推案管道。",
+    "sme_lessons": [
+      "自己做承包商可以把利润留在家里，但也要能承担工程风险。",
+      "土地是发展商的“原料库存”，补地节奏决定未来几年饭碗。"
+    ],
+    "risks": [
+      {
+        "title": "房市周期",
+        "detail": "房市放缓会直接影响新推案的销售。",
+        "basis": "inference"
+      },
+      {
+        "title": "项目集中",
+        "detail": "在建项目数量不多，单一项目延误影响大。",
+        "basis": "inference"
+      },
+      {
+        "title": "盈利起伏",
+        "detail": "发展商盈利依项目完工进度确认，季度波动大。",
+        "basis": "inference"
+      }
+    ]
+  }
+}

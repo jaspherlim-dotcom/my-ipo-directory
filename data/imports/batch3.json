@@ -1,0 +1,674 @@
+[
+ {
+  "slug": "big-caring",
+  "name": "Big Caring Group Bhd",
+  "name_zh": "Big Caring（大众关怀药房）",
+  "sector_zh": "零售 · 连锁药房",
+  "one_liner": "全国 600 多间门店的连锁药房，靠卖药品、保健品和个人护理产品赚钱。",
+  "facts": {
+   "market": {
+    "v": "Main",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ]
+   },
+   "business": {
+    "v": "马来西亚零售药房连锁，2006 年由一间店起家，现已超过 600 间门店，遍布全国 13 州；经营医疗保健、药品及保健品；计划未来 3 至 5 年每年开 40 至 50 间新店，并考虑收购及建新配送中心。现有 Bukit Raja 配送中心使用率 80.2%（截至 2026 年 9 月 30 日）。",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ]
+   },
+   "issue_price_rm": {
+    "v": 1.08,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "The Star 写为“最高 IPO 价”"
+   },
+   "new_shares": {
+    "v": 590500000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "占扩大后股本 8%"
+   },
+   "ofs_shares": {
+    "v": 1300000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "占扩大后股本 17.5%"
+   },
+   "proceeds_rm": {
+    "v": 637800000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "公开发售新股所得（毛额）"
+   },
+   "market_cap_rm": {
+    "v": 8000000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "约 RM80 亿"
+   },
+   "enlarged_shares": {
+    "v": 7400000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo"
+    ]
+   },
+   "prospectus_date": {
+    "v": "2026-10-29",
+    "src": [
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ]
+   },
+   "listing_date": {
+    "v": "2026-11-19",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo"
+    ]
+   },
+   "oversub_public": {
+    "v": 4.31,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/10/public-portion-of-big-caring-ipo-431-times-oversubscribed"
+    ],
+    "note": "土著部分约 0.94 倍（认购不足），其他马来西亚公众部分约 7.68 倍"
+   },
+   "applications": {
+    "v": 29474,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/10/public-portion-of-big-caring-ipo-431-times-oversubscribed"
+    ]
+   },
+   "adviser": {
+    "v": "Maybank IB、RHB IB、AmInvestment Bank（联合主要顾问）；UBS（联合全球协调人）",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo"
+    ]
+   }
+  },
+  "use_of_proceeds": [
+   {
+    "item": "偿还银行借款",
+    "rm": 570831000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "原文只给 89.5%，金额由本站按 RM637.8 百万计算"
+   },
+   {
+    "item": "设立新配送中心（36 个月内）",
+    "rm": 29976600,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "原文只给 4.7%，金额由本站按 RM637.8 百万计算"
+   },
+   {
+    "item": "上市费用",
+    "rm": 36992400,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo",
+     "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+    ],
+    "note": "原文只给 5.8%，金额由本站按 RM637.8 百万计算"
+   }
+  ],
+  "quotes": [
+   {
+    "who": "Livia Chan，董事",
+    "text": "Same-store sales growth remained healthy at high single digits",
+    "src": "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/"
+   }
+  ],
+  "source_meta": {
+   "https://www.thestar.com.my/business/business-news/2026/10/29/big-caring-plans-to-raise-rm6378mil-from-main-market-ipo": {
+    "title": "Big Caring plans to raise RM637.8mil from Main Market IPO",
+    "publisher": "The Star",
+    "date": "2026-10-29"
+   },
+   "https://www.thestar.com.my/business/business-news/2026/11/10/public-portion-of-big-caring-ipo-431-times-oversubscribed": {
+    "title": "Public portion of Big Caring IPO 4.31 times oversubscribed",
+    "publisher": "The Star",
+    "date": "2026-11-10"
+   },
+   "https://thesun.my/business/big-caring-group-plans-40-to-50-new-outlets-annually-over-next-three-to-five-years/": {
+    "title": "Big Caring Group plans 40 to 50 new outlets annually over next three to five years",
+    "publisher": "The Sun",
+    "date": "2026-10-29"
+   }
+  },
+  "todo_official": "待补：最终发行价、首日表现、招股书财务数据。中文名为本站暂译。",
+  "analysis": {
+   "generated_by": "ai",
+   "model": "claude-opus-5-5",
+   "generated_at": "2026-11-20",
+   "reviewed": false,
+   "based_on": [
+    "s1"
+   ],
+   "summary": "Big Caring 是今年最大的零售 IPO 之一：600 多间药房，市值约 RM80 亿。但要看清楚，公司拿到的钱近九成是拿去还银行，不是开新店。",
+   "bmc": {
+    "customer_segments": {
+     "text": "全国各地的一般消费者、病患与保健品买家。",
+     "basis": "inference"
+    },
+    "value_propositions": {
+     "text": "社区里随处可见、价格有竞争力、有药剂师咨询的一站式健康商店。",
+     "basis": "inference"
+    },
+    "channels": {
+     "text": "600 多间实体门店，覆盖 13 州。",
+     "basis": "fact"
+    },
+    "customer_relationships": {
+     "text": "会员制度与药剂师服务（新闻未详述）；同店销售增长维持高单位数。",
+     "basis": "fact"
+    },
+    "revenue_streams": {
+     "text": "药品、保健品、个人护理产品零售。",
+     "basis": "fact"
+    },
+    "key_resources": {
+     "text": "门店网络、Bukit Raja 配送中心（使用率 80.2%）。",
+     "basis": "fact"
+    },
+    "key_activities": {
+     "text": "采购、物流配送、开店与门店营运。",
+     "basis": "fact"
+    },
+    "key_partners": {
+     "text": "药厂与品牌供应商、物业业主。",
+     "basis": "inference"
+    },
+    "cost_structure": {
+     "text": "货品成本、店租、人事、物流；还债后利息成本会下降。",
+     "basis": "inference"
+    }
+   },
+   "moat": "护城河在于门店密度与采购规模：店越多，向药厂拿货越便宜，物流越有效率。",
+   "money_flow": "约 89.5% 的新股所得用来还银行借款，所以这次 IPO 更像“降负债 + 让老股东套现部分股份”，增长资金主要靠内部现金流。",
+   "watch": [
+    "每年新开 40-50 间店的进度",
+    "同店销售增长",
+    "还债后的利息节省与净利率",
+    "与 Watsons、Guardian、其他连锁药房的竞争"
+   ],
+   "investor_takeaway": "大型、业务易懂的消费股，但土著部分认购不足、公众部分只超额认购 4.31 倍，反映市场对 RM80 亿估值有保留。",
+   "sme_lessons": [
+    "连锁的威力在于规模经济：采购、物流、品牌一起放大。",
+    "同店销售增长比开新店更能说明生意是否健康。"
+   ],
+   "risks": [
+    {
+     "title": "估值",
+     "detail": "以 RM1.08 计市值约 RM80 亿，需对照盈利判断是否偏贵。",
+     "basis": "inference"
+    },
+    {
+     "title": "竞争",
+     "detail": "连锁药房与个人护理零售竞争激烈。",
+     "basis": "inference"
+    },
+    {
+     "title": "募资主要用于还债",
+     "detail": "增长主要靠内部现金流，不是新资金。",
+     "basis": "fact"
+    }
+   ]
+  }
+ },
+ {
+  "slug": "yes-group",
+  "name": "Yes Group Management Bhd",
+  "name_zh": "Yes Group（Yes Travel）",
+  "sector_zh": "服务 · 商务奖励旅游（MICE）",
+  "one_liner": "帮企业安排奖励旅游、会议和展览行程的 MICE 旅游公司。",
+  "facts": {
+   "market": {
+    "v": "ACE",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "business": {
+    "v": "经营 Yes Travel 品牌，为企业客户提供 MICE（会议、奖励旅游、大会及展览）旅游与活动管理服务；计划扩展欧洲地面交通服务、在英国设区域办事处服务英国和德国等西欧客户，并设立 Yes Academy（目标每年 100 名学员）。",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "issue_price_rm": {
+    "v": 0.18,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "new_shares": {
+    "v": 91870000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "ofs_shares": {
+    "v": 45930000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "proceeds_rm": {
+    "v": 16540000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ],
+    "note": "公开发售新股所得"
+   },
+   "app_close": {
+    "v": "2026-11-13",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+    ]
+   },
+   "listing_date": {
+    "v": "2026-11-26",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "oversub_public": {
+    "v": 2.8,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ],
+    "note": "⚠ 原文写 “subscribed 2.80 times”（认购倍数），口径可能与超额认购不同；土著部分 0.49 倍、其他公众部分 5.11 倍"
+   },
+   "applications": {
+    "v": 2053,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   },
+   "adviser": {
+    "v": "Malacca Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut"
+    ]
+   }
+  },
+  "use_of_proceeds": [
+   {
+    "item": "扩展欧洲地面交通服务、设英国办事处",
+    "rm": 6500000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+    ]
+   },
+   {
+    "item": "设立 Yes Academy",
+    "rm": 3000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+    ]
+   },
+   {
+    "item": "一般营运资金",
+    "rm": 3040000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+    ]
+   },
+   {
+    "item": "上市费用",
+    "rm": 4000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+    ]
+   }
+  ],
+  "quotes": [
+   {
+    "who": "Mak Shau Kwan，董事经理",
+    "text": "Having our own operations in the United Kingdom will improve cost efficiency",
+    "src": "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo"
+   }
+  ],
+  "source_meta": {
+   "https://www.thestar.com.my/business/business-news/2026/11/05/yes-group-aims-to-raise-rm1654mil-from-its-ipo": {
+    "title": "YES Group aims to raise RM16.54mil from its IPO",
+    "publisher": "The Star",
+    "date": "2026-11-05"
+   },
+   "https://www.thestar.com.my/business/business-news/2026/11/17/yes-group-ipo-public-portion-subscribed-280-times-ahead-of-ace-market-debut": {
+    "title": "Yes Group IPO public portion subscribed 2.80 times ahead of ACE Market debut",
+    "publisher": "The Star",
+    "date": "2026-11-17"
+   }
+  },
+  "analysis": {
+   "generated_by": "ai",
+   "model": "claude-opus-5-5",
+   "generated_at": "2026-11-20",
+   "reviewed": false,
+   "based_on": [
+    "s1"
+   ],
+   "summary": "公司奖励业绩好的员工去欧洲玩，背后要有人订机票、安排车、包场地，Yes Group 就是做这个的。它现在想在英国自己设点，把外包给当地的钱赚回来。",
+   "bmc": {
+    "customer_segments": {
+     "text": "企业客户（奖励旅游、会议、展览的主办方）。",
+     "basis": "fact"
+    },
+    "value_propositions": {
+     "text": "一站式安排团体行程与活动，客户只要讲预算和目的地。",
+     "basis": "inference"
+    },
+    "channels": {
+     "text": "直接对企业销售。",
+     "basis": "inference"
+    },
+    "customer_relationships": {
+     "text": "回头客为主，企业每年都有奖励旅游与年会。",
+     "basis": "inference"
+    },
+    "revenue_streams": {
+     "text": "MICE 项目收费（行程、交通、活动管理）。",
+     "basis": "fact"
+    },
+    "key_resources": {
+     "text": "供应商网络、团队执行经验、即将设立的英国办事处。",
+     "basis": "fact"
+    },
+    "key_activities": {
+     "text": "行程设计、供应商采购、现场执行。",
+     "basis": "inference"
+    },
+    "key_partners": {
+     "text": "航空公司、酒店、欧洲地面交通业者。",
+     "basis": "inference"
+    },
+    "cost_structure": {
+     "text": "机票、酒店、交通等外购成本占大头，利润率取决于议价能力。",
+     "basis": "inference"
+    }
+   },
+   "moat": "护城河在于企业客户关系与执行口碑；在欧洲自营地面交通，有机会把外包利润留在自己手上。",
+   "money_flow": "RM6.5 百万押注欧洲（英国办事处 + 地面交通），上市费用 RM4 百万约占募资 24%。",
+   "watch": [
+    "欧洲业务的利润贡献",
+    "企业客户的回头率",
+    "旅游需求与经济周期",
+    "汇率（英镑、欧元）"
+   ],
+   "investor_takeaway": "很小的 IPO（18 仙），公众认购偏冷、土著部分认购不足。旅游业受经济周期影响大，企业一削预算，奖励旅游往往第一个被砍。",
+   "sme_lessons": [
+    "把外包环节自己做（像在英国自设交通），是提高毛利的方法，但也增加固定成本。",
+    "服务业上市可以“卖培训”：Yes Academy 把经验变成另一条收入线。"
+   ],
+   "risks": [
+    {
+     "title": "经济周期",
+     "detail": "企业削减开支时，奖励旅游预算首当其冲。",
+     "basis": "inference"
+    },
+    {
+     "title": "海外扩张执行",
+     "detail": "在英国设点涉及人事、法规与成本控制。",
+     "basis": "inference"
+    },
+    {
+     "title": "认购偏冷",
+     "detail": "土著部分只认购 0.49 倍。",
+     "basis": "fact"
+    },
+    {
+     "title": "财务资料尚未收录",
+     "detail": "本站未有收入与利润资料。",
+     "basis": "unknown"
+    }
+   ]
+  }
+ },
+ {
+  "slug": "ecosys",
+  "name": "EcoSys (Malaysia) Bhd",
+  "name_zh": "EcoSys",
+  "sector_zh": "科技 · 半导体设备与废气处理",
+  "one_liner": "为半导体业制造超高纯度精密部件和废气处理系统，印度是重要市场。",
+  "facts": {
+   "market": {
+    "v": "ACE",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times"
+    ]
+   },
+   "business": {
+    "v": "工业解决方案供应商，为半导体及相关行业制造超高纯度（UHP）精密工程部件与子组件，以及废气处理系统（abatement systems）；印度市场在 FY2025 占集团收入 35.1%，印度废气处理业务新增 7 名客户，并计划在印度设销售与服务中心。",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   "issue_price_rm": {
+    "v": 0.27,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo",
+     "https://www.thestar.com.my/business/business-news/2026/10/14/ecosys-shares-soar-179-in-morning-trade"
+    ]
+   },
+   "new_shares": {
+    "v": 145700000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   "proceeds_rm": {
+    "v": 39340000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ],
+    "note": "全部为新股，没有献售旧股"
+   },
+   "listing_date": {
+    "v": "2026-10-14",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times",
+     "https://www.thestar.com.my/business/business-news/2026/10/14/ecosys-shares-soar-179-in-morning-trade"
+    ]
+   },
+   "oversub_public": {
+    "v": 206.7,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times"
+    ],
+    "note": "土著部分 136.77 倍，其他公众部分 276.63 倍"
+   },
+   "applications": {
+    "v": 31734,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times"
+    ]
+   },
+   "adviser": {
+    "v": "M&A Securities Sdn Bhd（主要顾问、保荐人、包销商及配售代理）；Eco Asia Capital Advisory（财务顾问）",
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   }
+  },
+  "use_of_proceeds": [
+   {
+    "item": "扩展废气处理业务（采购关键组件与模块）",
+    "rm": 17000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   {
+    "item": "偿还银行借款",
+    "rm": 8000000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   {
+    "item": "购买机器、增聘员工",
+    "rm": 4930000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   {
+    "item": "扩展印度业务",
+    "rm": 1540000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   {
+    "item": "营运资金",
+    "rm": 2360000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   },
+   {
+    "item": "上市费用",
+    "rm": 5500000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ]
+   }
+  ],
+  "financials": [
+   {
+    "label": "印度市场收入",
+    "period": "FY2025",
+    "rm": 38220000,
+    "src": [
+     "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+    ],
+    "note": "只是印度部分，占集团收入 35.1%；新闻未给集团总收入"
+   }
+  ],
+  "quotes": [
+   {
+    "who": "Chan Chee Wei，董事经理",
+    "text": "We believe these initiatives will enhance our ability to serve customers",
+    "src": "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo"
+   }
+  ],
+  "source_meta": {
+   "https://www.thestar.com.my/business/business-news/2026/09/23/ecosys-seeks-to-raise-rm3934mil-from-ace-market-ipo": {
+    "title": "EcoSys seeks to raise RM39.34mil from ACE Market IPO",
+    "publisher": "The Star",
+    "date": "2026-09-23"
+   },
+   "https://www.thestar.com.my/business/business-news/2026/10/01/ecosys-malaysia-ipo-public-portion-oversubscribed-2067-times": {
+    "title": "EcoSys Malaysia IPO public portion oversubscribed 206.7 times",
+    "publisher": "The Star",
+    "date": "2026-10-01"
+   },
+   "https://www.thestar.com.my/business/business-news/2026/10/14/ecosys-shares-soar-179-in-morning-trade": {
+    "title": "Ecosys shares soar 179% in ACE Market debut",
+    "publisher": "The Star",
+    "date": "2026-10-14"
+   }
+  },
+  "analysis": {
+   "generated_by": "ai",
+   "model": "claude-opus-5-5",
+   "generated_at": "2026-11-20",
+   "reviewed": false,
+   "based_on": [
+    "s1"
+   ],
+   "summary": "芯片厂会排出有毒废气，一定要处理才能排放。EcoSys 一边做这类废气处理系统，一边做超高纯度零件，等于站在半导体扩厂潮的“必需品”位置，而且三分之一收入来自正在大建芯片厂的印度。",
+   "bmc": {
+    "customer_segments": {
+     "text": "半导体及相关行业的工厂，包括印度客户。",
+     "basis": "fact"
+    },
+    "value_propositions": {
+     "text": "超高纯度部件与废气处理，帮芯片厂符合环保与制程要求。",
+     "basis": "inference"
+    },
+    "channels": {
+     "text": "直接销售，计划在印度设销售与服务中心。",
+     "basis": "fact"
+    },
+    "customer_relationships": {
+     "text": "设备装好后需要维护服务，形成长期关系。",
+     "basis": "inference"
+    },
+    "revenue_streams": {
+     "text": "部件制造 + 废气处理系统销售；印度 FY2025 收入 RM38.22 百万。",
+     "basis": "fact"
+    },
+    "key_resources": {
+     "text": "超高纯度制造能力、废气处理技术、印度客户群。",
+     "basis": "fact"
+    },
+    "key_activities": {
+     "text": "精密制造、系统组装、安装与服务。",
+     "basis": "inference"
+    },
+    "key_partners": {
+     "text": "半导体设备商与芯片厂。",
+     "basis": "inference"
+    },
+    "cost_structure": {
+     "text": "关键组件采购、机器、人员；募资 RM17 百万用于采购组件扩展废气处理业务。",
+     "basis": "fact"
+    }
+   },
+   "moat": "超高纯度与废气处理有技术门槛和客户认证，比一般机械加工更难被取代。",
+   "money_flow": "最大一笔 RM17 百万投入废气处理业务，RM8 百万还债，RM1.54 百万开拓印度。",
+   "watch": [
+    "印度客户与订单增长",
+    "半导体资本开支周期",
+    "首日暴涨后的估值是否透支",
+    "毛利率"
+   ],
+   "investor_takeaway": "公众超额认购 206.7 倍，首日早盘一度大涨（据 The Star 标题为 179%），短期情绪非常热。追高前要冷静对照盈利与估值。",
+   "sme_lessons": [
+    "在热门产业里找“必需又没人想做”的环节，比如废气处理。",
+    "海外市场占比高时，要在当地设服务点，才能守住客户。"
+   ],
+   "risks": [
+    {
+     "title": "估值透支",
+     "detail": "首日大涨后股价可能已反映多年增长。",
+     "basis": "inference"
+    },
+    {
+     "title": "半导体周期",
+     "detail": "芯片业资本开支放缓会直接影响订单。",
+     "basis": "inference"
+    },
+    {
+     "title": "印度市场集中",
+     "detail": "印度占收入 35.1%，当地政策或项目延误影响大。",
+     "basis": "fact"
+    }
+   ]
+  }
+ }
+]

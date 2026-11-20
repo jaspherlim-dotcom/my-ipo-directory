@@ -1,0 +1,231 @@
+{
+  "slug": "kee-ming",
+  "name": "Kee Ming Group Bhd",
+  "name_zh": "Kee Ming",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1"
+      ]
+    },
+    "business": {
+      "v": "综合机电（M&E）工程方案供应商，三大核心业务：再生能源并网（interconnection）工程、数据中心，以及工业设计与建造项目（工厂、半导体设施、物流中心）；曾为超大规模云服务商承接数据中心项目。",
+      "src": [
+        "s1"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.38,
+      "src": [
+        "s1"
+      ]
+    },
+    "new_shares": {
+      "v": 66630000,
+      "src": [
+        "s1"
+      ]
+    },
+    "ofs_shares": {
+      "v": 16250000,
+      "src": [
+        "s1"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 25300000,
+      "src": [
+        "s1"
+      ],
+      "note": "公开发行新股所得；连同献售旧股，IPO 总额为 RM31.50 百万"
+    },
+    "market_cap_rm": {
+      "v": 123500000,
+      "src": [
+        "s1"
+      ]
+    },
+    "enlarged_shares": {
+      "v": 325000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "prospectus_date": {
+      "v": "2026-01-21",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_open": {
+      "v": "2026-01-21",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_close": {
+      "v": "2026-01-27",
+      "src": [
+        "s1"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-02-12",
+      "src": [
+        "s1"
+      ],
+      "note": "文章发布时为预定上市日"
+    },
+    "adviser": {
+      "v": "TA Securities（主要顾问、保荐人、独家包销商及配售代理）；Eco Asia Capital Advisory（财务顾问）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "未来项目营运资金",
+      "rm": 13000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "未来项目履约保证金",
+      "rm": 4000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "公司扩张",
+      "rm": 1720000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "购买 ERP 系统",
+      "rm": 1000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "一般营运资金",
+      "rm": 598000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 5000000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {
+      "title": "ACE Market-bound Kee Ming Group to raise RM31.50mil from IPO",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-01-21",
+      "url": "https://www.thestar.com.my/business/business-news/2026/01/21/ace-market-bound-kee-ming-group-to-raise-rm3150mil-from-ipo",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。",
+  "quotes": [
+    {
+      "who": "Liew Kar Hoe，董事经理",
+      "text": "We see interconnection facilities work as a sustainable business and will last for many years,",
+      "src": "s1"
+    }
+  ],
+  "sector_zh": "工程 · 机电（再生能源 / 数据中心）",
+  "one_liner": "做机电工程的承包商，主攻再生能源并网、数据中心和工厂项目。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "Kee Ming 跟 MyDCD 有点像，都是数据中心热潮的“卖铲人”，但它多了一条再生能源并网的腿：太阳能电站要接上电网，就需要它这类承包商。",
+    "bmc": {
+      "customer_segments": {
+        "text": "再生能源电站业主、数据中心（含超大规模云服务商）、工厂与物流中心业主。",
+        "basis": "fact"
+      },
+      "value_propositions": {
+        "text": "一家公司搞定并网、数据中心与厂房机电，有相关项目记录。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "项目投标与过往客户推荐。",
+        "basis": "inference"
+      },
+      "customer_relationships": {
+        "text": "项目制，靠执行记录拿下一单。",
+        "basis": "inference"
+      },
+      "revenue_streams": {
+        "text": "机电工程合约收入；比例未披露。",
+        "basis": "inference"
+      },
+      "key_resources": {
+        "text": "工程团队、并网与数据中心项目经验。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "设计、施工、测试与并网。",
+        "basis": "fact"
+      },
+      "key_partners": {
+        "text": "设备供应商、分包商、银行（保证金）。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "材料、分包、人工；需垫付营运资金与履约保证金。",
+        "basis": "fact"
+      }
+    },
+    "moat": "并网工程需要特定资质与经验，门槛比一般机电高一些；但仍是项目制生意。",
+    "money_flow": "RM17 百万（约 67% 新股所得）用于未来项目的营运资金和履约保证金，典型的“接大工程要先垫钱”。",
+    "watch": [
+      "订单余额（order book）",
+      "再生能源项目政策（如大型太阳能招标）",
+      "应收账款与现金流",
+      "毛利率"
+    ],
+    "investor_takeaway": "两条增长线（再生能源、数据中心）都有政策和投资热潮支撑，但承包商盈利波动大，现金流是关键。",
+    "sme_lessons": [
+      "押对趋势很重要：再生能源和数据中心都是长期题材。",
+      "项目越大，越要准备好保证金和现金缓冲。"
+    ],
+    "risks": [
+      {
+        "title": "项目执行与成本超支",
+        "detail": "工程延误或材料涨价会吃掉利润。",
+        "basis": "inference"
+      },
+      {
+        "title": "政策依赖",
+        "detail": "再生能源业务受政府招标节奏影响。",
+        "basis": "inference"
+      },
+      {
+        "title": "财务资料尚未收录",
+        "detail": "本站未有收入与利润资料。",
+        "basis": "unknown"
+      }
+    ]
+  }
+}

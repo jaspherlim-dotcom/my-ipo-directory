@@ -19,11 +19,12 @@ FACT_LABELS = {
     "oversub_public": "公众超额认购", "applications": "申请份数", "prospectus_date": "招股书发布",
     "app_open": "开放认购", "app_close": "截止认购", "ballot_date": "抽签日期", "listing_date": "上市日期",
     "first_day_open_rm": "首日开盘价", "first_day_close_rm": "首日收盘价", "yield_pct": "预测收益率",
-    "adviser": "主要顾问", "stock_code": "股票代号",
+    "adviser": "主要顾问", "stock_code": "股票代号", "shariah": "伊斯兰合规",
+    "issuing_house": "发行行", "miti_allocation": "MITI 土著配额", "pe_ratio": "市盈率（IPO 价）",
 }
 KEY_ORDER = ["issue_price_rm", "market_cap_rm", "proceeds_rm", "oversub_public", "listing_date",
-             "first_day_open_rm", "first_day_close_rm", "yield_pct", "new_shares", "ofs_shares",
-             "enlarged_shares", "applications", "adviser"]
+             "first_day_open_rm", "first_day_close_rm", "yield_pct", "pe_ratio", "shariah", "miti_allocation", "new_shares", "ofs_shares",
+             "enlarged_shares", "applications", "issuing_house", "adviser"]
 TIMELINE_KEYS = ["prospectus_date", "app_open", "app_close", "ballot_date", "listing_date"]
 MARKET_ZH = {"Main": "主板", "ACE": "创业板 ACE", "LEAP": "LEAP 板"}
 KIND_ZH = {"official": "官方", "news": "新闻", "press_release": "公司新闻稿", "aggregator": "第三方整理", "prospectus": "招股书"}

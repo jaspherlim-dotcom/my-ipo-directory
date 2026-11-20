@@ -1,0 +1,211 @@
+{
+  "slug": "butterfield-fb",
+  "name": "Butterfield FB Bhd",
+  "name_zh": "Butterfield FB",
+  "stock_code": null,
+  "facts": {
+    "market": {
+      "v": "ACE",
+      "src": [
+        "s1"
+      ]
+    },
+    "business": {
+      "v": "咖啡及茶提取物粉末预混产品制造商，总部位于槟城 Bukit Minyak；IPO 后扩建总部，增加约 29,170 平方英尺生产空间及 9,954 平方英尺仓储，并装设年产能 4,095 公吨的第四条生产线。",
+      "src": [
+        "s1"
+      ]
+    },
+    "issue_price_rm": {
+      "v": 0.48,
+      "src": [
+        "s1"
+      ]
+    },
+    "new_shares": {
+      "v": 150000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "ofs_shares": {
+      "v": 72000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "proceeds_rm": {
+      "v": 72000000,
+      "src": [
+        "s1"
+      ],
+      "note": "公开发售新股所得"
+    },
+    "market_cap_rm": {
+      "v": 384000000,
+      "src": [
+        "s1"
+      ],
+      "note": "以 IPO 价及扩大后股本 8 亿股计算"
+    },
+    "enlarged_shares": {
+      "v": 800000000,
+      "src": [
+        "s1"
+      ]
+    },
+    "prospectus_date": {
+      "v": "2026-08-18",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_open": {
+      "v": "2026-08-18",
+      "src": [
+        "s1"
+      ]
+    },
+    "app_close": {
+      "v": "2026-09-02",
+      "src": [
+        "s1"
+      ]
+    },
+    "listing_date": {
+      "v": "2026-09-15",
+      "src": [
+        "s1"
+      ],
+      "note": "文章发布时为预定上市日"
+    },
+    "adviser": {
+      "v": "M&A Securities Sdn Bhd（顾问、保荐人、包销商及配售代理）",
+      "src": [
+        "s1"
+      ]
+    }
+  },
+  "use_of_proceeds": [
+    {
+      "item": "扩建槟城 Bukit Minyak 总部",
+      "rm": 15200000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "营运资金",
+      "rm": 37800000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "策略投资、合并或收购（目标为即溶咖啡与茶预混品牌）",
+      "rm": 13000000,
+      "src": [
+        "s1"
+      ]
+    },
+    {
+      "item": "上市费用",
+      "rm": 6000000,
+      "src": [
+        "s1"
+      ]
+    }
+  ],
+  "financials": [],
+  "sources": {
+    "s1": {
+      "title": "Butterfield FB to raise RM72mil from ACE Market IPO for business expansion",
+      "publisher": "The Star",
+      "kind": "news",
+      "date": "2026-08-18",
+      "url": "https://www.thestar.com.my/business/business-news/2026/08/18/butterfield-fb-to-raise-rm72mil-from-ace-market-ipo-for-business-expansion",
+      "accessed": "2026-11-20"
+    }
+  },
+  "todo_official": "待补：Bursa 上市公告与招股书链接。",
+  "sector_zh": "消费 · 咖啡茶预混粉制造",
+  "one_liner": "槟城的咖啡、茶提取物预混粉制造商，帮品牌做“三合一”背后的粉。",
+  "analysis": {
+    "generated_by": "ai",
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-11-20",
+    "reviewed": false,
+    "based_on": [
+      "s1"
+    ],
+    "summary": "你喝的三合一咖啡，背后可能不是品牌自己磨的粉。Butterfield 就是做这种预混粉的工厂，现在还想拿钱去收购品牌，从“幕后”走到“台前”。",
+    "bmc": {
+      "customer_segments": {
+        "text": "新闻未说明客户类型；募资计划收购即溶咖啡与茶预混品牌，显示它和这些品牌在同一条产业链。",
+        "basis": "inference"
+      },
+      "value_propositions": {
+        "text": "规模化生产预混粉，帮品牌省下自建工厂的成本。",
+        "basis": "inference"
+      },
+      "channels": {
+        "text": "B2B 直接供货；新闻未说明。",
+        "basis": "unknown"
+      },
+      "customer_relationships": {
+        "text": "代工关系通常较长期，配方和品质认证造成转换成本。",
+        "basis": "inference"
+      },
+      "revenue_streams": {
+        "text": "销售预混粉产品；收入数字新闻未披露。",
+        "basis": "fact"
+      },
+      "key_resources": {
+        "text": "槟城工厂、三条现有生产线 + 第四条新线（4,095 公吨）。",
+        "basis": "fact"
+      },
+      "key_activities": {
+        "text": "配方研发、生产、仓储。",
+        "basis": "fact"
+      },
+      "key_partners": {
+        "text": "咖啡、茶叶、奶粉、糖等原料供应商；未具名。",
+        "basis": "inference"
+      },
+      "cost_structure": {
+        "text": "原料成本（咖啡豆、奶粉、糖）占大头，价格波动大。",
+        "basis": "inference"
+      }
+    },
+    "moat": "护城河来自产能规模与配方能力；若成功收购品牌，就多了一层品牌溢价。",
+    "money_flow": "最大一笔 RM37.8 百万用作营运资金，另 RM13 百万留给收购品牌，说明管理层想往上游品牌延伸。",
+    "watch": [
+      "第四条生产线的使用率",
+      "原料价格对毛利率的影响",
+      "收购哪个品牌、付多少钱",
+      "出口比例"
+    ],
+    "investor_takeaway": "以 IPO 价算市值 RM3.84 亿，新闻没有披露盈利，估值是否合理要看招股书的财务数字。",
+    "sme_lessons": [
+      "代工厂往品牌走是常见升级路线，但品牌要的是营销能力，不只是工厂。",
+      "产能先行要配合订单，否则新厂房就是成本。"
+    ],
+    "risks": [
+      {
+        "title": "原料价格",
+        "detail": "咖啡、奶粉、糖价格波动会直接压缩利润。",
+        "basis": "inference"
+      },
+      {
+        "title": "收购风险",
+        "detail": "以 RM13 百万收购品牌，价格与整合能力决定成败。",
+        "basis": "inference"
+      },
+      {
+        "title": "财务资料尚未收录",
+        "detail": "本站未有收入与利润资料，请先读招股书。",
+        "basis": "unknown"
+      }
+    ]
+  }
+}
